@@ -32,7 +32,7 @@ Thank you for considering contributing to the VotePen. Here's a list of things y
 - [Twitter](https://twitter.com/VotePen)
 - [API documentation](https://api.votepen.com)
 - [#votepen](https://votepen.com/c/votepen) (for general discussion about VotePen)
-- [#votependev](https://votepen.com/c/votependev) (talk is cheap, show me the code!)
+- [#votependev](https://votepen.com/c/votependev) (let’s talk code!)
 
 ## API
 
