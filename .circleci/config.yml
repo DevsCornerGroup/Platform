@@ -62,5 +62,3 @@ jobs:
          name: Run Laravel Server
          command: php artisan serve
          background: true
-
-      - run: vendor/bin/phpunit
