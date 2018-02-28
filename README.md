@@ -3,9 +3,7 @@
     <img src="./public/imgs/votepen.png" alt="VotePen" height="72"
   </p>
   <p align="center">
-    <b>
-      Share, upvote, and discuss the best of the internet.
-    </b>
+      **Share, upvote, and discuss the best of the internet.**
   </p>
 </p>
 
