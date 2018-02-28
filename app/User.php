@@ -293,11 +293,11 @@ class User extends Authenticatable
      */
     public function isVotePenAdministrator()
     {
-        $users = Cache::remember('general.votepen-administrators', 60 * 60 * 12, function () {
-            $users = AppointeddUser::where('appointed_as', 'administrator')->pluck('user_id');
+        $users = Cache::rememberForever('general.votepen-administrators', 60 * 60 * 12, function () {
+            return AppointeddUser::where('appointed_as', 'administrator')->pluck('user_id');
         });
 
-        return !$users ? false : $users->contains($this->id);
+        return $users->contains($this->id);
     }
 
     /**
