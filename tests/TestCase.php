@@ -19,7 +19,7 @@ abstract class TestCase extends BaseTestCase
 
         return $this;
     }
-    
+
     protected function signInViaPassport($user = null)
     {
         $this->clearRedisCache();

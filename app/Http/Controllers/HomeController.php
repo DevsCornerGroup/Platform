@@ -41,11 +41,11 @@ class HomeController extends Controller
     public function feed(Request $request)
     {
         $this->validate($request, [
-            'page' => 'required|integer|min:1',
-            'exclude_upvoted_submissions' => 'boolean', 
-            'exclude_downvoted_submissions' => 'boolean', 
+            'page'                           => 'required|integer|min:1',
+            'exclude_upvoted_submissions'    => 'boolean',
+            'exclude_downvoted_submissions'  => 'boolean',
             'exclude_bookmarked_submissions' => 'boolean',
-            'include_nsfw_submissions' => 'boolean', 
+            'include_nsfw_submissions'       => 'boolean',
         ]);
 
         if (!Auth::check()) {
@@ -106,7 +106,7 @@ class HomeController extends Controller
         // exclude user's hidden submissions
         $submissions->whereNotIn('id', $this->hiddenSubmissions());
 
-        if (! $request->include_nsfw_submissions) {
+        if (!$request->include_nsfw_submissions) {
             $submissions->where('nsfw', false);
         }
 
