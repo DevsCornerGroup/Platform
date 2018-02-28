@@ -296,6 +296,7 @@ class User extends Authenticatable
         $users = Cache::rememberForever('general.votepen-administrators', function () {
             return AppointeddUser::where('appointed_as', 'administrator')->pluck('user_id');
         });
+
         return $users->contains($this->id);
     }
 
