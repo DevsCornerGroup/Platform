@@ -1,10 +1,8 @@
 @extends('layouts.app')
 
-
 @section('content')
 	<router-view></router-view>
 @endsection
-
 
 @section('head')
 	<title>{{ config('app.title') }}</title>
@@ -24,32 +22,32 @@
 	<meta name="twitter:image" content="{{ config('app.url') }}/imgs/{{ config('app.logo') }}" />
 
 	<script type="application/ld+json">
-	 {
-		 "@context": "http://schema.org",
-		 "@type": "WebSite",
-		 "url": "https://votepen.com",
-		 "name": "votepen",
-			"publisher": {
-			 "@type": "Organization",
-		  "logo": {
-			  "@type": "ImageObject",
-				 "url": "https://votepen.com/imgs/votepen-circle.png",
-				 "name": "VotePen",
-				 "height": "457",
-				 "width": "457"
-				}
-			},
-		 "sameAs": [
-			 "https://www.facebook.com/votepen/",
-			 "https://twitter.com/votepen"
-		 ],
-		 "potentialAction": {
-			"@type": "SearchAction",
-			"target": "https://votepen.com/?search={search_term_string}",
-			"query-input": "required name=search_term_string"
-		 }
+	{
+	 "@context": "http://schema.org",
+	 "@type": "WebSite",
+	 "url": "https://votepen.com",
+	 "name": "votepen",
+		"publisher": {
+		 "@type": "Organization",
+	  "logo": {
+		  "@type": "ImageObject",
+			 "url": "https://votepen.com/imgs/votepen-circle.png",
+			 "name": "VotePen",
+			 "height": "457",
+			 "width": "457"
+			}
+		},
+	 "sameAs": [
+		 "https://www.facebook.com/votepen/",
+		 "https://twitter.com/votepen"
+	 ],
+	 "potentialAction": {
+		"@type": "SearchAction",
+		"target": "https://votepen.com/?search={search_term_string}",
+		"query-input": "required name=search_term_string"
 	 }
-	 </script>
+	}
+	</script>
 
 	<script type="application/ld+json">
 	{

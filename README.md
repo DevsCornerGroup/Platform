@@ -4,7 +4,7 @@
   </p>
   <p align="center">
     <b>
-      Share, upvote, and discuss the best of the internet.
+      Share, upvote, and discuss the best of what's happening in the internet.
     </b>
   </p>
 </p>
