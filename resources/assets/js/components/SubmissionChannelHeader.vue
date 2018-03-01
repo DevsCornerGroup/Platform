@@ -1,19 +1,19 @@
 <template>
-	<div class="channel-header-small" v-bind:style="{ background: coverBackground }">
-		<button class="no-padding" type="button" @click="goBack">
-			<i class="v-left"></i>
-		</button>
+    <div class="channel-header-small" v-bind:style="{ background: coverBackground }">
+        <button class="no-padding" type="button" @click="goBack">
+            <i class="v-left"></i>
+        </button>
 
-		<router-link :to="'/c/' + name">
-			<img :src="avatar" :alt="name">
+        <router-link :to="'/c/' + name">
+            <img :src="avatar" :alt="name">
 
-			<h2>
-				{{ '#' + name }}
-			</h2>
-		</router-link>
+            <h2>
+                {{ '#' + name }}
+            </h2>
+        </router-link>
 
-		<subscribe subscribed-class="unsubscribe" unsubscribed-class="subscribe"></subscribe>
-	</div>
+        <subscribe subscribed-class="unsubscribe" unsubscribed-class="subscribe"></subscribe>
+    </div>
 </template>
 
 
@@ -25,10 +25,6 @@ export default {
         return {
             Store
         };
-    },
-
-    created() {
-        console.log(`referrer: "${document.referrer}"`); 
     },
 
     components: { Subscribe },
@@ -68,7 +64,11 @@ export default {
 
     methods: {
         goBack() {
-            history.go(-1);
+            if (document.referrer.indexOf('votepen.tk') >= 0) {
+                history.go(-1);
+            } else {
+                window.location = '/c/' + Store.page.channel.temp.name;
+            }
         }
     }
 };
