@@ -19,7 +19,7 @@ return [
     'twitter_username' => '@VotePen',
     'twitter-url'      => 'https://twitter.com/VotePen',
     'github_url'       => 'https://gitlab.com/VotePen/Platform',
-    'blog_url'         => 'https://medium.com/votepen',
+    'blog_url'         => 'https://blog.votepen.com',
 
     /*
     |--------------------------------------------------------------------------
