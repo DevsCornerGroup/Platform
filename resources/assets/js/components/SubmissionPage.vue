@@ -1,92 +1,92 @@
 <template>
-	<div id="submission-page"
-	     class="home-wrapper user-select">
-		<div class="flex1"
-		     id="comments-submission-page">
-			<submission-channel-header></submission-channel-header>
+    <div id="submission-page"
+         class="home-wrapper user-select">
+        <div class="flex1"
+             id="comments-submission-page">
+            <submission-channel-header></submission-channel-header>
 
-			<div class="col-full padding-bottom-1 flex1">
-				<nsfw-warning v-if="submission.nsfw == 1 && !Store.settings.feed.include_nsfw_submissions"
-				              :text="'This submission contains NSFW content which can not be displayed according to your personal settings.'">
-				</nsfw-warning>
+            <div class="col-full padding-bottom-1 flex1">
+                <nsfw-warning v-if="submission.nsfw == 1 && !Store.settings.feed.include_nsfw_submissions"
+                              :text="'This submission contains NSFW content which can not be displayed according to your personal settings.'">
+                </nsfw-warning>
 
-				<div v-if="submission.nsfw == 0 || Store.settings.feed.include_nsfw_submissions">
-					<loading v-if="loadingSubmission"></loading>
+                <div v-if="submission.nsfw == 0 || Store.settings.feed.include_nsfw_submissions">
+                    <loading v-if="loadingSubmission"></loading>
 
-					<full-submission v-if="!loadingSubmission"
-					                 :list="submission"
-					                 :full="true"></full-submission>
+                    <full-submission v-if="!loadingSubmission"
+                                     :list="submission"
+                                     :full="true"></full-submission>
 
-					<section class="box-typical comments"
-					         id="comments-section"
-					         v-if="!loadingSubmission">
-						<header class="user-select flex-space">
-							<div class="v-bold">
-								<span v-show="comments.length">{{ submission.comments_count }}</span> Comments:
-								<span class="go-gray go-small"
-								      v-if="!isGuest">({{ onlineUsersCount }} online users)</span>
-							</div>
+                    <section class="box-typical comments"
+                             id="comments-section"
+                             v-if="!loadingSubmission">
+                        <header class="user-select flex-space">
+                            <div class="v-bold">
+                                <span v-show="comments.length">{{ submission.comments_count }}</span> Comments:
+                                <span class="go-gray go-small"
+                                      v-if="!isGuest">({{ onlineUsersCount }} online users)</span>
+                            </div>
 
-							<el-dropdown size="medium"
-							             trigger="click"
-							             :show-timeout="0"
-							             :hide-timeout="0"
-							             type="primary"
-							             v-show="comments.length > 1">
-								<span class="el-dropdown-link">
-									{{ sort === 'hot' ? 'Hot' : 'New' }}
-									<i class="el-icon-arrow-down el-icon--right"></i>
-								</span>
+                            <el-dropdown size="medium"
+                                         trigger="click"
+                                         :show-timeout="0"
+                                         :hide-timeout="0"
+                                         type="primary"
+                                         v-show="comments.length > 1">
+                                <span class="el-dropdown-link">
+                                    {{ sort === 'hot' ? 'Hot' : 'New' }}
+                                    <i class="el-icon-arrow-down el-icon--right"></i>
+                                </span>
 
-								<el-dropdown-menu slot="dropdown">
-									<el-dropdown-item @click.native="newSort('hot')">
-										Hot
-									</el-dropdown-item>
+                                <el-dropdown-menu slot="dropdown">
+                                    <el-dropdown-item @click.native="newSort('hot')">
+                                        Hot
+                                    </el-dropdown-item>
 
-									<el-dropdown-item @click.native="newSort('new')">
-										New
-									</el-dropdown-item>
-								</el-dropdown-menu>
-							</el-dropdown>
-						</header>
+                                    <el-dropdown-item @click.native="newSort('new')">
+                                        New
+                                    </el-dropdown-item>
+                                </el-dropdown-menu>
+                            </el-dropdown>
+                        </header>
 
-						<div class="box-typical-inner ui threaded comments"
-						     v-if="submission.id != 0">
-							<span class="simple-loading"
-							      v-if="loadingComments && page < 2">
-								<i class="el-icon-loading"></i>
-							</span>
+                        <div class="box-typical-inner ui threaded comments"
+                             v-if="submission.id != 0">
+                            <span class="simple-loading"
+                                  v-if="loadingComments && page < 2">
+                                <i class="el-icon-loading"></i>
+                            </span>
 
-							<span v-if="!loadingComments && comments.length < 1"
-							      class="no-comments-yet">
-								No comments here yet. Care to be the first one?
-							</span>
+                            <span v-if="!loadingComments && comments.length < 1"
+                                  class="no-comments-yet">
+                                No comments here yet. Care to be the first one?
+                            </span>
 
-							<comment :list="c"
-							         :comments-order="commentsOrder"
-							         v-for="c in uniqueList"
-							         :key="c.id"
-							         :full="true"></comment>
-						</div>
-					</section>
+                            <comment :list="c"
+                                     :comments-order="commentsOrder"
+                                     v-for="c in uniqueList"
+                                     :key="c.id"
+                                     :full="true"></comment>
+                        </div>
+                    </section>
 
-					<div class="align-center margin-bottom-1"
-					     v-if="moreComments">
-						<el-button round type="success"
-						           plain
-						           class="half-width"
-						           @click="loadMoreComments"
-						           :loading="loadingComments">
-							Load More Comments
-						</el-button>
-					</div>
-				</div>
-			</div>
-		</div>
+                    <div class="align-center margin-bottom-1"
+                         v-if="moreComments">
+                        <el-button round type="success"
+                                   plain
+                                   class="half-width"
+                                   @click="loadMoreComments"
+                                   :loading="loadingComments">
+                            Load More Comments
+                        </el-button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-		<comment-form :submission="submission.id"
-		              :commentors="commentors"></comment-form>
-	</div>
+        <comment-form :submission="submission.id"
+                      :commentors="commentors"></comment-form>
+    </div>
 </template>
 
 <script>
@@ -165,7 +165,7 @@ export default {
             })
             .catch((error) => {
                 // if (error.response.status === 404) {
-                // 	this.$router.push('/404')
+                //  this.$router.push('/404')
                 // }
             });
     },
@@ -192,7 +192,7 @@ export default {
             })
             .catch((error) => {
                 // if (error.response.status === 404) {
-                // 	this.$router.push('/404')
+                //  this.$router.push('/404')
                 // }
 
                 this.$Progress.fail();
