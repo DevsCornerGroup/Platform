@@ -13,13 +13,13 @@ return [
     */
 
     'name'             => 'VotePen',
-    'title'            => 'VotePen: Where your vote matters',
-    'description'      => 'An open-source, beautiful, highly customizable yet deadly simple, and warm community. ',
+    'title'            => 'Stay Updated!',
+    'description'      => 'Share, upvote, and discuss the best of what\'s happening in the internet.',
     'logo'             => 'votepen.png',
     'twitter_username' => '@VotePen',
     'twitter-url'      => 'https://twitter.com/VotePen',
     'github_url'       => 'https://gitlab.com/VotePen/Platform',
-    'blog_url'         => 'https://medium.com/votepen',
+    'blog_url'         => 'https://blog.votepen.com',
 
     /*
     |--------------------------------------------------------------------------
