@@ -63,7 +63,7 @@
 <div class="container">
     <div class="content">
         <a href="/">
-            <img src="/imgs/votepen-circle.png" alt="VotePen" class="logo">
+            <img src="https://cdn.jsdelivr.net/npm/votepen-cdn@1.0.0-beta/imgs/votepen-circle.png" alt="VotePen" class="logo">
         </a>
 
         <div class="title">
