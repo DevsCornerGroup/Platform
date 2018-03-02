@@ -140,7 +140,7 @@ class ModeratorController extends Controller
             'reportable_type' => 'App\Comment',
         ])->delete();
 
-        return response('Comment approved successfully', 200);
+        return back();
     }
 
     /**

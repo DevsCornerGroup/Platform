@@ -174,7 +174,7 @@ class CommentController extends Controller
 
         $comment->forceDelete();
 
-        return res(200, 'Comment deleted successfully.');
+        return back();
     }
 
     /**
