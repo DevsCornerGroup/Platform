@@ -7,6 +7,8 @@
 /public/*.js
 /public/*.css
 /public/submissions
+/public/channels
+/public/users
 /chunk
 /public/mix-manifest.json
 /.idea
