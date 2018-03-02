@@ -1,10 +1,8 @@
 @extends('layouts.guest')
 
-
 @section('content')
 	<router-view></router-view>
 @endsection
-
 
 @section('head')
 	<title>{{ config('app.title') }}</title>
@@ -24,7 +22,7 @@
 	<meta name="twitter:image" content="https://cdn.jsdelivr.net/npm/votepen-cdn@1.0.0-beta/imgs/votepen-circle.png" />
 
 	<script type="application/ld+json">
-	 {
+	{
 		 "@context": "http://schema.org",
 		 "@type": "WebSite",
 		 "url": "https://votepen.com",
@@ -102,8 +100,6 @@
 	}
 	</script>
 @endsection
-
-
 
 @section('script')
 	@if (isset($submissions))
