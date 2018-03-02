@@ -64,8 +64,8 @@ export default {
             return Store.state.moderatingAt.length > 0;
         }, 
 
-        isVotenAdministrator() {
-            return meta.isVotenAdminstrator; 
+        isVotePenAdministrator() {
+            return meta.isVotePenAdminstrator; 
         }
     },
 
