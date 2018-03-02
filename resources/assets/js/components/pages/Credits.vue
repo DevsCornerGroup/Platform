@@ -111,24 +111,6 @@
                         </p>
                     </div>
                 </div>
-
-                <!-- <div class="item">
-                    <h3>
-                        <a href="https://www.elastic.co/products/elasticsearch" rel="nofollow">
-                            <img src="https://cdn.jsdelivr.net/npm/votepen-cdn@1.0.0-beta/landing/credits/elastic.png">
-                        </a>
-                    </h3>
-
-                    <div>
-                        <p>
-                            Elasticsearch is a search server based on Lucene. It provides a distributed, multitenant-capable full-text search engine with a RESTful web interface and schema-free JSON documents.
-                        </p>
-
-                        <p>
-                            Elasticsearch is developed in Java and is released as open source under the terms of the Apache License.
-                        </p>
-                    </div>
-                </div> -->
                 
                 <div class="item">
                     <h3>
