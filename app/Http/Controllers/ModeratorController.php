@@ -84,7 +84,7 @@ class ModeratorController extends Controller
             'reportable_type' => 'App\Submission',
         ])->delete();
 
-        return back();
+        return response('Submission approved', 200);
     }
 
     /**
@@ -140,7 +140,7 @@ class ModeratorController extends Controller
             'reportable_type' => 'App\Comment',
         ])->delete();
 
-        return back();
+        return response('Comment approved successfully', 200);
     }
 
     /**
