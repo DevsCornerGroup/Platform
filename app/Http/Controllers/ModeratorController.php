@@ -84,7 +84,7 @@ class ModeratorController extends Controller
             'reportable_type' => 'App\Submission',
         ])->delete();
 
-        return response('Submission approved', 200);
+        return back();
     }
 
     /**
@@ -111,7 +111,7 @@ class ModeratorController extends Controller
 
         event(new SubmissionWasDeleted($submission, false));
 
-        return response('Submission deleted successfully', 200);
+        return back();
     }
 
     /**
@@ -140,7 +140,7 @@ class ModeratorController extends Controller
             'reportable_type' => 'App\Comment',
         ])->delete();
 
-        return response('Comment approved successfully', 200);
+        return back();
     }
 
     /**
@@ -168,7 +168,7 @@ class ModeratorController extends Controller
             'deleted_at'  => Carbon::now(),
         ]);
 
-        return response('Comment deleted successfully', 200);
+        return back();
     }
 
     /**
