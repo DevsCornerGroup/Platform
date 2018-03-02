@@ -99,7 +99,7 @@
                     </el-button>
 
                     <el-button round type="warning" @click="$router.push('/c/' + $route.params.name + '/mod')"
-                               v-if="!isModerator && isVotenAdministrator" size="mini">
+                               v-if="!isModerator && isVotePenAdministrator" size="mini">
                         Moderation
                     </el-button>
                 </div>

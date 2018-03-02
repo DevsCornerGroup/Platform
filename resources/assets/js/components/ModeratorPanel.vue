@@ -91,7 +91,7 @@ export default {
                 Store.state.administratorAt.indexOf(
                     Store.page.channel.temp.id
                 ) != -1 || 
-                this.isVotenAdministrator
+                this.isVotePenAdministrator
             );
         }
     },
