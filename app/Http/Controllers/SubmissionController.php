@@ -228,7 +228,7 @@ class SubmissionController extends Controller
 
         $submission->forceDelete();
 
-        return res(200, 'Submission deleted successfully.');
+        return back();
     }
 
     /**
