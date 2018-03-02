@@ -27,11 +27,9 @@ yarn.lock
 npm-debug.log
 composer.lock
 .phpstorm.meta.php
-.vscode
 _ide_helper_models.php
 _ide_helper.php
 .env.dusk.testing
 dist
 package-lock.json
-circle.yml
 .eslintrc.js
