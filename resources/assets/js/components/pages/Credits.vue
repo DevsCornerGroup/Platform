@@ -29,7 +29,7 @@
                 <div class="item">
                     <h3>
                         <a href="http://php.net/" rel="nofollow">
-                            <img src="/landing/credits/php.png" alt="PHP7">
+                            <img src="http://cdn.jsdelivr.net/npm/votepen-cdn@1.0.0-beta/landing/credits/php.png" alt="PHP7">
                         </a>
                     </h3>
 
@@ -43,7 +43,7 @@
                 <div class="item">
                     <h3>
                         <a href="https://laravel.com/" rel="nofollow">
-                            <img src="/landing/credits/laravel.png" alt="laravel">
+                            <img src="http://cdn.jsdelivr.net/npm/votepen-cdn@1.0.0-beta/landing/credits/laravel.png" alt="laravel">
                         </a>
                     </h3>
 
@@ -61,7 +61,7 @@
                 <div class="item">
                     <h3>
                         <a href="https://vuejs.org/" rel="nofollow">
-                            <img src="/landing/credits/vue.jpg" alt="vue">
+                            <img src="http://cdn.jsdelivr.net/npm/votepen-cdn@1.0.0-beta/landing/credits/vue.jpg" alt="vue">
                         </a>
                     </h3>
 
@@ -79,7 +79,7 @@
                 <div class="item">
                     <h3>
                         <a href="http://element.eleme.io/#/en-US" rel="nofollow">
-                            <img src="/landing/credits/element.jpg" alt="Element">
+                            <img src="http://cdn.jsdelivr.net/npm/votepen-cdn@1.0.0-beta/landing/credits/element.jpg" alt="Element">
                         </a>
                     </h3>
 
@@ -97,7 +97,7 @@
                 <div class="item">
                     <h3>
                         <a href="http://www.mysql.com" rel="nofollow">
-                            <img src="/landing/credits/mysql.png" alt="mysql">
+                            <img src="http://cdn.jsdelivr.net/npm/votepen-cdn@1.0.0-beta/landing/credits/mysql.png" alt="mysql">
                         </a>
                     </h3>
 
@@ -115,7 +115,7 @@
                 <!-- <div class="item">
                     <h3>
                         <a href="https://www.elastic.co/products/elasticsearch" rel="nofollow">
-                            <img src="/landing/credits/elastic.png">
+                            <img src="http://cdn.jsdelivr.net/npm/votepen-cdn@1.0.0-beta/landing/credits/elastic.png">
                         </a>
                     </h3>
 
@@ -133,7 +133,7 @@
                 <div class="item">
                     <h3>
                         <a href="https://www.algolia.com/referrals/fb684d54/join" rel="nofollow">
-                            <img src="/landing/credits/algolia.svg">
+                            <img src="http://cdn.jsdelivr.net/npm/votepen-cdn@1.0.0-beta/landing/credits/algolia.svg">
                         </a>
                     </h3>
 
@@ -147,7 +147,7 @@
                 <div class="item">
                     <h3>
                         <a href="https://nodejs.org/en/" rel="nofollow">
-                            <img src="/landing/credits/node.png" alt="nodeJS">
+                            <img src="http://cdn.jsdelivr.net/npm/votepen-cdn@1.0.0-beta/landing/credits/node.png" alt="nodeJS">
                         </a>
                     </h3>
                     <div>
@@ -164,7 +164,7 @@
                 <div class="item">
                     <h3>
                         <a href="http://socket.io/" rel="nofollow">
-                            <img src="/landing/credits/socket.png" alt="socket">
+                            <img src="http://cdn.jsdelivr.net/npm/votepen-cdn@1.0.0-beta/landing/credits/socket.png" alt="socket">
                         </a>
                     </h3>
 
@@ -181,7 +181,7 @@
                 <div class="item">
                     <h3>
                         <a href="https://nginx.org/" rel="nofollow">
-                            <img src="/landing/credits/nginx.png" alt="nginx">
+                            <img src="http://cdn.jsdelivr.net/npm/votepen-cdn@1.0.0-beta/landing/credits/nginx.png" alt="nginx">
                         </a>
                     </h3>
 
