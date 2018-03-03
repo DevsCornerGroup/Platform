@@ -118,7 +118,7 @@ export default {
     },
 
     created() {
-        this.setPageTitle('VotePen: ' + Laravel.title, true);
+        this.setPageTitle('VotePen');
         this.startTour();
         this.$eventHub.$on('refresh-home', this.refresh);
     },
