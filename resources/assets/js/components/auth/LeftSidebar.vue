@@ -151,8 +151,7 @@
 				<a class="item"
 				   href="/backend"
 				   target="_blank">
-					<i class="el-icon-service"
-					   aria-hidden="true"></i>
+				   <i class="el-icon-service" aria-hidden="true"></i>
 				</a>
 			</el-tooltip>
 
@@ -164,8 +163,7 @@
 				<a class="item"
 				   @click.prevent="pushRouter('/night-watch')"
 				   href="/night-watch">
-					<i class="el-icon-view"
-					   aria-hidden="true"></i>
+				   <i class="el-icon-view" aria-hidden="true"></i>
 				</a>
 			</el-tooltip>
 
