@@ -9,11 +9,11 @@
 
 
 <script>
-import MapIcon from '../components/Icons/MapIcon.vue';
+import NotFound from '../components/Icons/NotFound.vue';
 
 export default {
     components: {
-        MapIcon
+        NotFound
     },
 
     data() {
