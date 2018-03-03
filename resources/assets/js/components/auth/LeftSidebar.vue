@@ -141,13 +141,13 @@
 		</div>
 
 		<div class="bottom"
-		     v-if="isLoggedIn"
-		     v-if="meta.isVotePenAdminstrator">
+		     v-if="isLoggedIn">
 			<!-- admin buttons -->
 			<el-tooltip content="Backend Dashboard"
 			            placement="right"
 			            transition="false"
-			            :open-delay="500">
+			            :open-delay="500"
+			            v-if="meta.isVotePenAdminstrator">
 				<a class="item"
 				   href="/backend"
 				   target="_blank">
@@ -159,7 +159,8 @@
 			<el-tooltip content="Big-daddy Dashboard"
 			            placement="right"
 			            transition="false"
-			            :open-delay="500">
+			            :open-delay="500"
+			            v-if="meta.isVotePenAdminstrator">
 				<a class="item"
 				   @click.prevent="pushRouter('/big-daddy')"
 				   href="/big-daddy">
