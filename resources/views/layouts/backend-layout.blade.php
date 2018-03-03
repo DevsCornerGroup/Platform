@@ -7,7 +7,7 @@
 
     <title>
     	@section('title')
-    		Backend | VotePen
+    		Backend | {{ config('app.name') }}
     	@show
     </title>
 
