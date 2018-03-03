@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('BROADCAST_DRIVER', 'log'),
+    'default' => env('BROADCAST_DRIVER', 'redis'),
 
     /*
     |--------------------------------------------------------------------------
@@ -30,7 +30,7 @@ return [
     |
     */
 
-    'service' => env('BROADCAST_SERVICE', 'pusher'),
+    'service' => env('BROADCAST_SERVICE', 'echo'),
 
     /*
     |--------------------------------------------------------------------------
