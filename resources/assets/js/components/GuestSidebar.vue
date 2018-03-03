@@ -87,7 +87,7 @@
 			<h3>New to VotePen?</h3>
 
 			<p>
-				More than 90% of VotePen's impressive features are either disabled or hidden for guests. Registration takes only a few seconds and doesn't even require an email address!
+				By having a VotePen account, you can subscribe, vote, and comment on all your favorite channel content. Sign up in just seconds.
 			</p>
 
 			<el-button round type="primary"
