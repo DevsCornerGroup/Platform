@@ -5,15 +5,15 @@
 @endsection
 
 @section('head')
-	<title>{{ config('app.title') }}</title>
+	<title>{{ config('app.name') }}</title>
 	<meta property="og:type" content="article" />
-	<meta property="og:title" content="{{ config('app.title') }}" />
+	<meta property="og:title" content="{{ config('app.name') }}" />
 	<meta property="og:url" content="{{ config('app.url') }}" />
 	<meta property="og:site_name" content="{{ config('app.name') }}" />
 
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:site" content="{{ config('app.twitter_username') }}" />
-	<meta name="twitter:title" content="{{ config('app.title') }}" />
+	<meta name="twitter:title" content="{{ config('app.name') }}" />
 
 	<meta name="description" content="{{ config('app.description') }}"/>
 	<meta property="og:description" content="{{ config('app.description') }}" />
