@@ -63,7 +63,7 @@
         <div class="container">
             <div class="content">
                 <a href="/">
-                    <img src="https://cdn.jsdelivr.net/npm/votepen-cdn@1.0.0-beta/imgs/votepen-circle.png" alt="{{ config('app.name') }}" class="logo">
+                    <img src="{{ config('app.cdn_url') }}imgs/v-logo.png" alt="{{ config('app.name') }}" class="logo">
                 </a>
 
                 <div class="title">

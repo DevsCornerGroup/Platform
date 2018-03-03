@@ -15,11 +15,11 @@
 		<meta name="description" content="{{ $submission->data['text'] }}"/>
 		<meta property="og:description" content="{{ $submission->data['text'] }}" />
 		<meta name="twitter:description" content="{{ $submission->data['text'] }}" />
-		<meta property="og:image" content="https://cdn.jsdelivr.net/npm/votepen-cdn@1.0.0-beta/imgs/votepen-circle.png">
-		<meta name="twitter:image" content="https://cdn.jsdelivr.net/npm/votepen-cdn@1.0.0-beta/imgs/votepen-circle.png" />
+		<meta property="og:image" content="{{ config('app.cdn_url') }}imgs/v-logo.png">
+		<meta name="twitter:image" content="{{ config('app.cdn_url') }}imgs/v-logo.png" />
 	@else
-		<meta property="og:image" content="{{ $submission->data['thumbnail'] ?? $submission->data['path'] ?? '/imgs/votepen-circle.png' }}" />
-		<meta name="twitter:image" content="{{ $submission->data['thumbnail'] ?? $submission->data['path'] ?? '/imgs/votepen-circle.png' }}" />
+		<meta property="og:image" content="{{ $submission->data['thumbnail'] ?? $submission->data['path'] ?? '{{ config('app.cdn_url') }}imgs/v-logo.png' }}" />
+		<meta name="twitter:image" content="{{ $submission->data['thumbnail'] ?? $submission->data['path'] ?? '{{ config('app.cdn_url') }}imgs/v-logo.png' }}" />
 	@endif
 @stop
 

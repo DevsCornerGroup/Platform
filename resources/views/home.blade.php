@@ -18,8 +18,8 @@
 	<meta name="description" content="{{ config('app.description') }}"/>
 	<meta property="og:description" content="{{ config('app.description') }}" />
 	<meta name="twitter:description" content="{{ config('app.description') }}" />
-	<meta property="og:image" content="{{ config('app.cdn_url') }}imgs/votepen-circle.png">
-	<meta name="twitter:image" content="{{ config('app.cdn_url') }}imgs/votepen-circle.png" />
+	<meta property="og:image" content="{{ config('app.cdn_url') }}imgs/v-logo.png">
+	<meta name="twitter:image" content="{{ config('app.cdn_url') }}imgs/v-logo.png" />
 
 	<script type="application/ld+json">
 	{

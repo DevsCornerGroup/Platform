@@ -151,7 +151,7 @@
 	<div class="container">
 		<div class="align-center">
 			<a href="https://votepen.com">
-				<img src=https://cdn.jsdelivr.net/npm/votepen-cdn@1.0.0-beta/imgs/votepen-circle.png" alt="VotePen" class="logo" width="150">
+				<img src="{{ config('app.cdn_url') }}imgs/v-logo.png" alt="VotePen" class="logo" width="150">
 			</a>
 		</div>
 
