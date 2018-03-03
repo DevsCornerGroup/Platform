@@ -156,14 +156,14 @@
 				</a>
 			</el-tooltip>
 
-			<el-tooltip content="Big-daddy Dashboard"
+			<el-tooltip content="Night Watch Dashboard"
 			            placement="right"
 			            transition="false"
 			            :open-delay="500"
 			            v-if="meta.isVotePenAdministrator">
 				<a class="item"
-				   @click.prevent="pushRouter('/big-daddy')"
-				   href="/big-daddy">
+				   @click.prevent="pushRouter('/night-watch')"
+				   href="/night-watch">
 					<i class="el-icon-view"
 					   aria-hidden="true"></i>
 				</a>
