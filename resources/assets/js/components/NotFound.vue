@@ -1,21 +1,14 @@
 <template>
 	<section class="container margin-top-1 col-7" id="not-found">
 		<div class="no-content-wrapper user-select">
-			<map-icon width="260" height="260"></map-icon>
+			<img style="width:50px" src="https://image.flaticon.com/icons/svg/202/202381.svg"></img>
 			<p v-text="message"></p>
 		</div>
 	</section>
 </template>
 
-
 <script>
-import NotFound from '../components/Icons/NotFound.vue';
-
 export default {
-    components: {
-        NotFound
-    },
-
     data() {
         return {
             message:
