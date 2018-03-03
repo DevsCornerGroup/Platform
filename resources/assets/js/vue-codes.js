@@ -217,7 +217,7 @@ window.app = new Vue({
 
             Push.create(data.title, {
                 body: data.body,
-                icon: data.icon ? data.icon : 'https://cdn.jsdelivr.net/npm/votepen-cdn@1.0.0/imgs/votepen-500.png',
+                icon: data.icon ? data.icon : 'https://cdn.jsdelivr.net/npm/votepen-cdn@1.0.0/imgs/v-logo.png',
                 timeout: 5000,
                 onClick: function() {
                     if (data.url == 'new-message') {
