@@ -113,7 +113,7 @@ export default {
                 !this.submission.approved_at &&
                 (Store.state.moderatingAt.indexOf(this.submission.channel_id) !=
                     -1 ||
-                    meta.isVotePenAdminstrator) &&
+                    meta.isVotePenAdministrator) &&
                 !this.owns
             );
         },
@@ -123,7 +123,7 @@ export default {
                 !this.submission.deleted_at &&
                 (Store.state.moderatingAt.indexOf(this.submission.channel_id) !=
                     -1 ||
-                    meta.isVotePenAdminstrator) &&
+                    meta.isVotePenAdministrator) &&
                 !this.owns
             );
         },
@@ -134,7 +134,7 @@ export default {
                     Store.state.moderatingAt.indexOf(
                         this.submission.channel_id
                     ) != -1 ||
-                    meta.isVotePenAdminstrator) &&
+                    meta.isVotePenAdministrator) &&
                 !this.submission.nsfw
             );
         },
@@ -145,7 +145,7 @@ export default {
                     Store.state.moderatingAt.indexOf(
                         this.submission.channel_id
                     ) != -1 ||
-                    meta.isVotePenAdminstrator) &&
+                    meta.isVotePenAdministrator) &&
                 this.submission.nsfw
             );
         },
