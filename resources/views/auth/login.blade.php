@@ -1,7 +1,7 @@
 @extends('layouts.no-sidebar')
 
 @section('title')
-	<title>Login | VotePen</title>
+	<title>Login | {{ config('app.name') }}</title>
 @stop
 
 @section('content')

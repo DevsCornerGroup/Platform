@@ -2,15 +2,15 @@
 
 
 @section('head')
-	<title>#{{ $channel->name }} - VotePen</title>
+	<title>#{{ $channel->name }} - {{ config('app.name') }}</title>
 	<meta property="og:type" content="article" />
-	<meta property="og:title" content="#{{ $channel->name }} - VotePen" />
+	<meta property="og:title" content="#{{ $channel->name }} - {{ config('app.name') }}" />
 	<meta property="og:url" content="{{ config('app.url') }}/c/{{ $channel->name }}" />
-	<meta property="og:site_name" content="VotePen" />
+	<meta property="og:site_name" content="{{ config('app.name') }}" />
 
 	<meta name="twitter:card" content="summary" />
-	<meta name="twitter:site" content="@VotePen" />
-	<meta name="twitter:title" content="#{{ $channel->name }} - VotePen" />
+	<meta name="twitter:site" content="{{ config('app.twitter_username') }" />
+	<meta name="twitter:title" content="#{{ $channel->name }} - {{ config('app.name') }}" />
 
 	<meta name="description" content="{{ $channel->description }}"/>
 	<meta property="og:description" content="{{ $channel->description }}" />
