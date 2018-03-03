@@ -35,7 +35,7 @@
             <!--Algolia Logo -->
             <div class="algolia desktop-only">
                 <a href="https://www.algolia.com/referrals/fb684d54/join" target="_blank" rel="nofollow">
-                    <img src="https://cdn.jsdelivr.net/npm/votepen-cdn@1.0.0-beta/imgs/algolia-powered-by.svg" alt="Search by algolia">
+                    <img src="https://cdn-votepen.surge.sh/imgs/algolia-powered-by.svg" alt="Search by algolia">
                 </a>
             </div>
 
