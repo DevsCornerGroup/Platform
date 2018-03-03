@@ -21,7 +21,7 @@
                 </div>
 
                 <el-tooltip content="Scroll to top" placement="bottom" transition="false" :open-delay="500">
-                    <img src="https://cdn-votepen.surge.sh/imgs/v-logo.png" class="logo" alt="VotePen" @click="scrollToTop('submissions')">
+                    <img src="https://cdn-votepen.netlify.com/imgs/v-logo.png" class="logo" alt="VotePen" @click="scrollToTop('submissions')">
                 </el-tooltip>    
 
                 <div class="flex-center">
