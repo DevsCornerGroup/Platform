@@ -381,9 +381,9 @@ class BackendController extends Controller
                 'comments_number' => $submission->comments()->count(),
             ]);
         }
-        
+
         session()->flash('status', 'Comments count updated');
-        
+
         return back();
     }
 }
