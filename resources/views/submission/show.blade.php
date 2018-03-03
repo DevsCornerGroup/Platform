@@ -1,6 +1,5 @@
 @extends('layouts.guest')
 
-
 @section('head')
 	<title>{{ $submission->title }} - VotePen</title>
 	<meta property="og:type" content="article" />
@@ -23,7 +22,6 @@
 		<meta name="twitter:image" content="{{ $submission->data['thumbnail'] ?? $submission->data['path'] ?? '/imgs/votepen-circle.png' }}" />
 	@endif
 @stop
-
 
 @section('content')
 	<router-view></router-view>
