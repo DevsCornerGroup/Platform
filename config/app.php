@@ -20,6 +20,7 @@ return [
     'twitter-url'      => 'https://twitter.com/VotePen',
     'github_url'       => 'https://gitlab.com/VotePen/Platform',
     'blog_url'         => 'https://blog.votepen.com',
+    'cdn_url'          => 'https://cdn-votepen.surge.sh/',
 
     /*
     |--------------------------------------------------------------------------
