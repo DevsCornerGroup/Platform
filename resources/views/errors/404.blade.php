@@ -1,14 +1,14 @@
 @extends('layouts.guest')
 
 @section('head')
-	<title>Not Found 404 - VotePen</title>
+	<title>Not Found 404 - {{ config('app.name') }}</title>
 	<meta property="og:type" content="article" />
-	<meta property="og:title" content="Not Found 404 - VotePen" />
-	<meta property="og:site_name" content="VotePen" />
+	<meta property="og:title" content="Not Found 404 - {{ config('app.name') }}" />
+	<meta property="og:site_name" content="{{ config('app.name') }}" />
 
 	<meta name="twitter:card" content="summary" />
-	<meta name="twitter:site" content="@VotePen" />
-	<meta name="twitter:title" content="Not Found 404 - VotePen" />
+	<meta name="twitter:site" content="{{ config('app.twitter_username') }}" />
+	<meta name="twitter:title" content="Not Found 404 - {{ config('app.name') }}" />
 
 	<meta name="description" content="Sorry, that page doesn’t exist!"/>
 	<meta property="og:description" content="Sorry, that page doesn’t exist!" />
