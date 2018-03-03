@@ -13,7 +13,7 @@
 					     :alt="auth.username"
 					     class="avatar">
 
-					<strong class="break-words">{{ '@' + auth.username }}</strong>
+					<span style="margin-left:10px" class="break-words">{{ '<b>@</b>' + auth.username }}</span>
 				</span>
 
 				<i :class="showMenu ? 'el-icon-close' : 'el-icon-arrow-down'"></i>
