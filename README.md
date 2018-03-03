@@ -1,6 +1,6 @@
 <p align="center">
   <p align="center">
-    <img src="https://cdn-votepen.surge.sh/imgs/votepen.png" alt="VotePen" height="72"
+    <img src="https://cdn-votepen.netlify.com/imgs/votepen.png" alt="VotePen" height="72"
   </p>
   <p align="center">
     <b>
