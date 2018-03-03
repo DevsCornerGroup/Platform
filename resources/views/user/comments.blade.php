@@ -1,6 +1,5 @@
 @extends('layouts.guest')
 
-
 @section('head')
 	<title>{{ '@' . $user->username }} - VotePen</title>
 	<meta property="og:type" content="article" />
@@ -22,11 +21,9 @@
 	<meta name="twitter:image" content="{{ $user->avatar }}" />
 @stop
 
-
 @section('content')
 	<router-view></router-view>
 @endsection
-
 
 @section('script')
 	<script>
