@@ -1,7 +1,7 @@
 @extends('layouts.guest')
 
 @section('title')
-	<title>Reset Password | VotePen</title>
+	<title>Reset Password | {{ config('app.name') }}</title>
 @stop
 
 @section('content')
