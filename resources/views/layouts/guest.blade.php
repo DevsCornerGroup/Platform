@@ -21,7 +21,7 @@
 
     @include('env-to-js-data')
 
-    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/npm/votepen-cdn@1.0.0-beta/imgs/favicon.png">
+    <link rel="shortcut icon" href="{{ config('app.cdn_url') }}imgs/favicon.png">
 </head>
 
 <body>

@@ -1,7 +1,7 @@
 <nav class="nav has-shadow">
     <div class="container">
         <a href="/" class="backend-logo">
-            <img src="https://cdn.jsdelivr.net/npm/votepen-cdn@1.0.0-beta/imgs/votepen.svg" alt="{{ config('app.name') }}">
+            <img src="{{ config('app.cdn_url') }}imgs/v-logo.png" alt="{{ config('app.name') }}">
         </a>
 
         <div class="nav-right">
