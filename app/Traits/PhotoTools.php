@@ -9,7 +9,7 @@ trait PhotoTools
 {
     protected function ftpAddress()
     {
-        return env('CDN_URL', 'http://gitpen.ga/');
+        return env('CDN_URL', 'https://i1.wp.com/votepen.tk/');
     }
 
     /**

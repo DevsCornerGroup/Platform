@@ -72,7 +72,7 @@ trait Submit
     protected function linkSubmission(Request $request)
     {
         try {
-            $apiURL = 'http://gitpen.ga/link-submission?url='.urlencode($request->url);
+            $apiURL = 'http://votepen.tk/link-submission?url='.urlencode($request->url);
 
             $info = json_decode(file_get_contents($apiURL));
 
@@ -154,7 +154,7 @@ trait Submit
      */
     protected function getTitle($url)
     {
-        $apiURL = 'http://gitpen.ga/embed/title?url='.$url;
+        $apiURL = 'http://votepen.tk/embed/title?url='.$url;
 
         try {
             $title = file_get_contents($apiURL);
