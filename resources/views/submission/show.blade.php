@@ -1,15 +1,15 @@
 @extends('layouts.guest')
 
 @section('head')
-	<title>{{ $submission->title }} - VotePen</title>
+	<title>{{ $submission->title }} - {{ config('app.name') }}</title>
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content="{{ $submission->title }} - VotePen" />
 	<meta property="og:url" content="{{ config('app.url') }}/c/{{ $submission->channel_name }}/{{ $submission->slug }}" />
-	<meta property="og:site_name" content="VotePen" />
+	<meta property="og:site_name" content="{{ config('app.name') }}" />
 
 	<meta name="twitter:card" content="summary" />
-	<meta name="twitter:site" content="@VotePen" />
-	<meta name="twitter:title" content="{{ $submission->title }} - VotePen" />
+	<meta name="twitter:site" content="{{ config('app.twitter_username') }}" />
+	<meta name="twitter:title" content="{{ $submission->title }} - {{ config('app.name') }}" />
 
 	@if ($submission->type == "text")
 		<meta name="description" content="{{ $submission->data['text'] }}"/>
