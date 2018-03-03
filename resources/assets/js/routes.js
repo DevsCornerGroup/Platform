@@ -67,7 +67,7 @@ const routes = [
         meta: { title: 'My Subscriptions' }
     },
     {
-        path: '/big-daddy',
+        path: '/night-watch',
         component: AdminPanel,
         children: [
             {
