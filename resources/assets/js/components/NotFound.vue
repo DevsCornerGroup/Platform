@@ -1,7 +1,7 @@
 <template>
 	<section class="container margin-top-1 col-7" id="not-found">
 		<div class="no-content-wrapper user-select">
-			<img style="width:50px" src="https://image.flaticon.com/icons/svg/202/202381.svg"></img>
+			<img class="svg-icons" src="https://cdn.jsdelivr.net/npm/cdn-votepen@1.0.1/svgs/notfound.svg"></img>
 			<p v-text="message"></p>
 		</div>
 	</section>
