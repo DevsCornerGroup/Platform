@@ -59,6 +59,26 @@
             </div>
         </div>
 
+        <div class="column is-half">
+            <div class="block">
+                <h1 class="title">Views:</h1>
+
+                <p>
+                    This clears View's cache. It's necessary after updating .env file.
+                </p>
+            </div>
+
+            <div class="block">
+                <form action="/ssh/view-clear" method="post">
+                    {{ csrf_field() }}
+
+                    <button class="button is-danger" type="submit">
+                        Clear Views
+                    </button>
+                </form>
+            </div>
+        </div>
+        
     </div>
 </section>
 

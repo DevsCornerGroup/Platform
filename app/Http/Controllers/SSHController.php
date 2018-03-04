@@ -20,7 +20,9 @@ class SSHController extends Controller
     public function flushAll()
     {
         Cache::flush();
-
+        
+        session()->flash('status', 'Redis cache cleared');
+        
         return back();
     }
 
@@ -33,9 +35,25 @@ class SSHController extends Controller
     {
         Artisan::call('cache:clear');
 
+        session()->flash('status', 'Artisan cache cleared');
+
         return back();
     }
 
+    /**
+     * clears the artisan cache.
+     *
+     * @return redirect
+     */
+    public function viewCache()
+    {
+        Artisan::call('view:clear');
+
+        session()->flash('status', 'Views cleared');
+
+        return back();
+    }
+    
     /**
      * clears the artisan cache.
      *
