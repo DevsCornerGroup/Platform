@@ -101,28 +101,7 @@
                 </form>
             </div>
         </div>
-        
-        <div class="column is-half">
-            <div class="column is-half">
-                <div class="block">
-                    <h1 class="title">Update comments count:</h1>
 
-                    <p>
-                        Updates the count of comments per submissions. (useful in case a spammer screws with us)
-                    </p>
-                </div>
-
-                <div class="block">
-                    <form action="/backend/update-comments-count" method="post">
-                        {{ csrf_field() }}
-
-                        <button class="button is-info" type="submit">
-                            Update Comments count
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
 
         <div class="column is-half">
             <div class="column is-half">
@@ -137,6 +116,30 @@
                 {{--<div class="block">--}}
                     {{--<a class="button is-info" href="/"></a>--}}
                 {{--</div>--}}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section container">
+    <div class="columns is-multiline is-mobile">
+        <div class="column is-half">
+            <div class="block">
+                <h1 class="title">Update comments count:</h1>
+
+                <p>
+                    Updates the count of comments per submissions. (useful in case a spammer screws with us)
+                </p>
+            </div>
+
+            <div class="block">
+                <form action="/backend/update-comments-count" method="post">
+                    {{ csrf_field() }}
+
+                    <button class="button is-info" type="submit">
+                        Update Comments count
+                    </button>
+                </form>
             </div>
         </div>
     </div>
