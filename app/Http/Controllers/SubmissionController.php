@@ -226,8 +226,6 @@ class SubmissionController extends Controller
 
         event(new SubmissionWasDeleted($submission, true));
         
-        removeThumbnail($submission_id);
-        
         $submission->forceDelete();
 
         return back();
