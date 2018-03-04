@@ -242,8 +242,7 @@ a.nav-item.is-tab.is-active {
 }
 
 .nav.has-shadow {
-    border-bottom: 2px solid #d8e2e7;
-    box-shadow: 0 2px 0 hsla(200, 9%, 93%, 0.25);
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);
     // margin-bottom: 1em;
 }
 
