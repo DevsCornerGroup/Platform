@@ -25,8 +25,9 @@
                 We are a small team of developers risen from the world of open-source. We believe in an open and modern Internet.
                 VotePen's mission is to give people the power to share their content with not just their friends but the world and interact in real-time.
             </p>
-
-            <div class="item">
+            
+            <div class="container-grid margin-top-2">
+                <div class="item">
                     <h3>
                         <a href="#" rel="nofollow">
                             <img src="https://cdn.jsdelivr.net/npm/cdn-votepen@1.0.2/landing/about/share.png" alt="Share">
@@ -68,6 +69,7 @@
                         </p>
                     </div>
                 </div>
+            </div>
             <br>
             <h2 class="title">Users are voters</h2>
             <p>
