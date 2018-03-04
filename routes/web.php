@@ -96,7 +96,9 @@ Route::get('/emails/announcement/preview', 'EmailsController@preview');
 // ssh control
 Route::post('/ssh/flush-all', 'SSHController@flushAll');
 Route::post('/ssh/cache-clear', 'SSHController@clearCache');
-Route::post('/ssh/view-clear', 'SSHController@viewCache');
+Route::post('/ssh/view-clear', 'SSHController@viewClear');
+Route::post('/ssh/config-clear', 'SSHController@configClear');
+Route::post('/ssh/route-clear', 'SSHController@routeClear');
 Route::post('/ssh/stop-maintenance', 'SSHController@stopMaintenanceMode');
 Route::post('/ssh/start-maintenance', 'SSHController@startMaintenanceMode');
 

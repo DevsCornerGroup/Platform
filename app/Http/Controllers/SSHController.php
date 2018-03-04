@@ -41,19 +41,47 @@ class SSHController extends Controller
     }
 
     /**
-     * clears the artisan cache.
+     * clears the view cache.
      *
      * @return redirect
      */
-    public function viewCache()
+    public function viewClear()
     {
         Artisan::call('view:clear');
 
-        session()->flash('status', 'Views cleared');
+        session()->flash('status', 'Views cache cleared');
 
         return back();
     }
 
+    /**
+     * clears the config cache.
+     *
+     * @return redirect
+     */
+    public function configClear()
+    {
+        Artisan::call('config:clear');
+
+        session()->flash('status', 'Config cache cleared');
+
+        return back();
+    }
+
+    /**
+     * clears the route cache.
+     *
+     * @return redirect
+     */
+    public function routeClear()
+    {
+        Artisan::call('route:clear');
+
+        session()->flash('status', 'Routes cache cleared');
+
+        return back();
+    }
+    
     /**
      * clears the artisan cache.
      *
