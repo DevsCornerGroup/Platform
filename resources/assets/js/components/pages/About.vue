@@ -26,6 +26,48 @@
                 VotePen's mission is to give people the power to share their content with not just their friends but the world and interact in real-time.
             </p>
 
+            <div class="item">
+                    <h3>
+                        <a href="#" rel="nofollow">
+                            <img src="https://cdn.jsdelivr.net/npm/cdn-votepen@1.0.2/landing/about/share.png" alt="Share">
+                        </a>
+                        Share
+                    </h3>
+
+                    <div>
+                        <p>
+                            Anyone can create a channel on nearly any topic imaginable. Each channel is independently moderated by volunteer users. Channel members can share content including stories, links, and images.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <h3>
+                        <a href="#" rel="nofollow">
+                            <img src="https://cdn.jsdelivr.net/npm/cdn-votepen@1.0.2/landing/about/vote.png" alt="Vote">
+                        </a>
+                    </h3>
+
+                    <div>
+                        <p>
+                            The global VotePen community votes on which stories and discussions are important by casting upvotes or downvotes. The most interesting, funniest, impactful, or simply amazing stories rise to the top.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <h3>
+                        <a href="#" rel="nofollow">
+                            <img src="https://cdn.jsdelivr.net/npm/cdn-votepen@1.0.2/landing/about/discuss.png" alt="Discuss">
+                        </a>
+                    </h3>
+
+                    <div>
+                        <p>
+                            Users can comment on any post on VotePen. Comments are often the best part about VotePen content—they provide additional information, vigorous discussion, context, and often humor.
+                        </p>
+                    </div>
+                </div>
             <br>
             <h2 class="title">Users are voters</h2>
             <p>
