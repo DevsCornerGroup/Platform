@@ -188,7 +188,6 @@ return [
         Laravel\Passport\PassportServiceProvider::class,
         Sentry\SentryLaravel\SentryLaravelServiceProvider::class,
         Laravel\Scout\ScoutServiceProvider::class,
-        Collective\Remote\RemoteServiceProvider::class,
 
         // dev only
         VueGenerators\ServiceProvider::class,
@@ -247,7 +246,6 @@ return [
         'FFMpeg'    => Pbmedia\LaravelFFMpeg\FFMpegFacade::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         'Sentry'    => Sentry\SentryLaravel\SentryFacade::class,
-        'SSH'       => Collective\Remote\RemoteFacade::class,
 
     ],
 
