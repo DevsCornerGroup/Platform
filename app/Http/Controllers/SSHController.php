@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Artisan;
 use Illuminate\Support\Facades\Cache;
 
-class SshController extends Controller
+class SSHController extends Controller
 {
     public function __construct()
     {
