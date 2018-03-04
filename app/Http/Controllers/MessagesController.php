@@ -119,7 +119,9 @@ class MessagesController extends Controller
 
         Auth::user()->conversations()->detach($request->input('messages'));
         
-        $request->forceDelete();
+        $comment = Auth::user()->conversations()->detach($request->input('messages'));
+        
+        $comment->forceDelete();
         
         return res(200, count($request->input('messages')).' messages were  deleted.');
     }
