@@ -26,7 +26,7 @@ Thank you for considering contributing to the VotePen. Here's a list of things y
 ## Resources
 
 - [Help Center](https://help.votepen.com)
-- [Installation guide for source code](/installation.md)
+- [Installation guide for source code](/INSTALLATION.md)
 - [Roadmap](https://github.com/VotePen/VotePen/projects/2)
 - [Blog](https://medium.com/votepen/)
 - [Twitter](https://twitter.com/VotePen)
