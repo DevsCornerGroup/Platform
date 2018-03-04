@@ -81,7 +81,7 @@ class SSHController extends Controller
 
         return back();
     }
-    
+
     /**
      * clears the artisan cache.
      *
