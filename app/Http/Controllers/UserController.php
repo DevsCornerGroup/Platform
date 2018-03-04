@@ -246,8 +246,5 @@ class UserController extends Controller
         DB::table('comment_upvotes')->where('user_id', $user_id)->delete();
         DB::table('comment_downvotes')->where('user_id', $user_id)->delete();
         DB::table('appointedd_users')->where('user_id', $user_id)->delete();
-        
-        $profilepcture = DB::table('bookmarks')->where('user_id', $user_id);
-        File::delete($profilepcture);
     }
 }
