@@ -30,7 +30,7 @@
 <template>
 	<div id="submissions"
 	     class="home-submissions">
-		<div class="echo-info-wrapper" v-if="!echo.loading">
+		 <!-- <div class="echo-info-wrapper" v-if="!echo.loading">
 			<div class="echo-info-box">
 				<div class="info">
 					Online Users:
@@ -54,7 +54,7 @@
 
 				{{ echo.items.memory_usage }}
 			</div>
-		</div>
+		</div> -->
 
 		<div class="flex-space">
 			<h2>
