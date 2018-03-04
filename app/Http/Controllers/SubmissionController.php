@@ -228,6 +228,8 @@ class SubmissionController extends Controller
 
         $submission->forceDelete();
 
+        removeThumbnail($submission_id);
+
         return back();
     }
 
@@ -261,7 +263,7 @@ class SubmissionController extends Controller
 
         $this->putSubmissionInTheCache($submission);
 
-        return res(200, 'thumbnail removed. ');
+        return res(200, 'thumbnail removed.');
     }
 
     /**
