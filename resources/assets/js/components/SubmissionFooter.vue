@@ -64,7 +64,7 @@
 			</div>
 		</div>
 
-		<span class="desktop-only" v-if="! isMobile">
+		<span class="desktop-only submitted-on" v-if="! isMobile">
 			Submitted {{ date }} by
 			<router-link :to="'/' + '@' + submission.author.username" class="h-underline desktop-only">
 				{{ '@' + submission.author.username }}
