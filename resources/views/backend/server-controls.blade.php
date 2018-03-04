@@ -79,7 +79,27 @@
             </div>
             </div>
         </div>
-        
+
+        <div class="column is-half">
+            <div class="column is-half">
+                {{--<div class="block">--}}
+                    {{--<h1 class="title"></h1>--}}
+
+                    {{--<p>--}}
+                        {{----}}
+                    {{--</p>--}}
+                {{--</div>--}}
+
+                {{--<div class="block">--}}
+                    {{--<a class="button is-info" href="/"></a>--}}
+                {{--</div>--}}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section container">
+    <div class="columns is-multiline is-mobile">
         <div class="column is-half">
             <div class="block">
                 <h1 class="title">
@@ -99,23 +119,6 @@
                         Send Emails
                     </button>
                 </form>
-            </div>
-        </div>
-
-
-        <div class="column is-half">
-            <div class="column is-half">
-                {{--<div class="block">--}}
-                    {{--<h1 class="title"></h1>--}}
-
-                    {{--<p>--}}
-                        {{----}}
-                    {{--</p>--}}
-                {{--</div>--}}
-
-                {{--<div class="block">--}}
-                    {{--<a class="button is-info" href="/"></a>--}}
-                {{--</div>--}}
             </div>
         </div>
     </div>
