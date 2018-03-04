@@ -38,7 +38,6 @@
             </div>
         </div>
 
-
         <div class="column is-half">
             <div class="block">
                 <h1 class="title">Cache</h1>
@@ -121,11 +120,7 @@
                 </form>
             </div>
         </div>
-    </div>
-</section>
-
-<section class="section container">
-    <div class="columns is-multiline is-mobile">
+        
         <div class="column is-half">
             <div class="block">
                 <h1 class="title">Update comments count:</h1>
