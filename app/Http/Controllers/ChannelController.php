@@ -153,15 +153,15 @@ class ChannelController extends Controller
             'description' => 'required|min:10|max:250',
         ]);
 
-        if (!$this->mustHaveMinimumXp(10) && !$this->mustBeWhitelisted()) {
-            return response(200, 'During beta, channel creation requires a minimum of 10 xp points.
-            Either do a bit of activity or contact administrators to lift the limits for your account.');
-        }
+        /* if (!$this->mustHaveMinimumXp(10) && !$this->mustBeWhitelisted()) {
+            return response('During beta, channel creation requires a minimum of 10 xp points.
+            Either do a bit of activity or contact administrators to lift the limits for your account.', 200);
+        } */
 
         $tooEarly = $this->tooEarlyToCreate();
 
         if ($tooEarly != false) {
-            return response(200, "Looks like you're over doing it. You can create another channel in ".$tooEarly.' seconds. Thank you for being patient.');
+            return response("Looks like you're over doing it. You can create another channel in ".$tooEarly.' seconds. Thank you for being patient.', 200);
         }
 
         $channel = Channel::create([
