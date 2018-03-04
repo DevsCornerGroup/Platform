@@ -75,6 +75,26 @@
                         Clear Redis Cache
                     </button>
                 </form>
+                
+                <br>
+                
+                <form action="/ssh/config-clear" method="post">
+                    {{ csrf_field() }}
+
+                    <button class="button is-warning" type="submit">
+                        Clear Config Cache
+                    </button>
+                </form>
+                
+                <br>
+                
+                <form action="/ssh/route-clear" method="post">
+                    {{ csrf_field() }}
+
+                    <button class="button is-warning" type="submit">
+                        Clear Routes Cache
+                    </button>
+                </form>
             </div>
         </div>
     </div>
