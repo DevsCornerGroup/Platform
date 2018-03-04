@@ -31,17 +31,17 @@
 
             <div class="form-group">
                 <label for="group" class="form-label">Group:</label>
-                <input type="text" class="form-control" name="group" v-model="group" id="group"
+                <input type="text" class="el-input__inner night-watch-box" name="group" v-model="group" id="group"
                         placeholder="Group...">
             </div>
 
             <div class="form-group">
                 <label for="index" class="form-label">Index:</label>
-                <input type="number" class="form-control" name="index" v-model="z_index" id="index"
+                <input type="number" class="el-input__inner night-watch-box" name="index" v-model="z_index" id="index"
                         placeholder="Index...">
             </div>
 
-            <button class="v-button v-button--green" @click="submit">
+            <button class="el-button el-button--success el-button--mini is-enabled is-round night-watch-button" @click="submit">
                 Create
             </button>
         </div>
