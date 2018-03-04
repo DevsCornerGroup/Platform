@@ -10,7 +10,7 @@
     <div class="columns is-multiline is-mobile">
         <div class="column is-half">
             <div class="block">
-                <h1 class="title">Maintenance Mode:</h1>
+                <h1 class="title">Maintenance Mode</h1>
 
                 <p>
                     Here you can put the website down for users. This is great for maintenance and updating stuff.
@@ -41,7 +41,7 @@
 
         <div class="column is-half">
             <div class="block">
-                <h1 class="title">Artisan Cache:</h1>
+                <h1 class="title">Cache</h1>
 
                 <p>
                     This clears Laravel's cache. It's necessary after updating .env file.
@@ -56,19 +56,9 @@
                         Clear Artisan Cache
                     </button>
                 </form>
-            </div>
-        </div>
-
-        <div class="column is-half">
-            <div class="block">
-                <h1 class="title">Views:</h1>
-
-                <p>
-                    This clears View's cache. It's necessary after updating .env file.
-                </p>
-            </div>
-
-            <div class="block">
+                
+                <br>
+                
                 <form action="/ssh/view-clear" method="post">
                     {{ csrf_field() }}
 
@@ -76,6 +66,17 @@
                         Clear Views
                     </button>
                 </form>
+                
+                <br>
+                
+                <form action="/ssh/flush-all" method="post">
+                    {{ csrf_field() }}
+
+                    <button class="button is-warning" type="submit">
+                        Clear Redis Cache
+                    </button>
+                </form>
+            </div>
             </div>
         </div>
         
@@ -85,27 +86,6 @@
 
 <section class="section container">
     <div class="columns is-multiline is-mobile">
-        <div class="column is-half">
-            <div class="block">
-                <h1 class="title">Redis Cache:</h1>
-
-                <p>
-                    You may clear all Redis cache in server, this'll cause more database queries, so please becareful. Run it only when it's necessary.
-                </p>
-            </div>
-
-            <div class="block">
-                <form action="/ssh/flush-all" method="post">
-                    {{ csrf_field() }}
-
-                    <button class="button is-warning" type="submit">
-                        Clear Redis Cache
-                    </button>
-                </form>
-            </div>
-        </div>
-
-
         <div class="column is-half">
             <div class="column is-half">
                 <div class="block">
