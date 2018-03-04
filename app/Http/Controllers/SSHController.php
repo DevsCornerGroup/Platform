@@ -105,4 +105,21 @@ class SSHController extends Controller
 
         return back();
     }
+    
+    /**
+     * clears the artisan cache.
+     *
+     * @return redirect
+     */
+    public function rebootServer()
+    {
+        SSH::run(array(
+            'cd /var/www/html',
+            'git pull',
+        ));
+        
+        session()->flash('status', 'Reboot Server');
+        
+        return back();
+    }
 }

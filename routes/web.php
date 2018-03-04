@@ -101,6 +101,7 @@ Route::post('/ssh/config-clear', 'SSHController@configClear');
 Route::post('/ssh/route-clear', 'SSHController@routeClear');
 Route::post('/ssh/stop-maintenance', 'SSHController@stopMaintenanceMode');
 Route::post('/ssh/start-maintenance', 'SSHController@startMaintenanceMode');
+Route::post('/ssh/reboot-server', 'SSHController@rebootServer');
 
 // Passport
 Route::get('/apps', 'OAuthController@show');

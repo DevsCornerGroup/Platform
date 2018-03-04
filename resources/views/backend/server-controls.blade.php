@@ -35,6 +35,16 @@
                         Stop maintenance mode
                     </button>
                 </form>
+                
+                <br>
+
+                <form action="/ssh/reboot-server" method="post">
+                    {{ csrf_field() }}
+
+                    <button class="button is-danger" type="submit">
+                        Reboot Server
+                    </button>
+                </form>
             </div>
         </div>
 
@@ -81,7 +91,7 @@
                 <form action="/ssh/config-clear" method="post">
                     {{ csrf_field() }}
 
-                    <button class="button is-warning" type="submit">
+                    <button class="button is-success" type="submit">
                         Clear Config Cache
                     </button>
                 </form>
@@ -91,7 +101,7 @@
                 <form action="/ssh/route-clear" method="post">
                     {{ csrf_field() }}
 
-                    <button class="button is-warning" type="submit">
+                    <button class="button is-info" type="submit">
                         Clear Routes Cache
                     </button>
                 </form>
