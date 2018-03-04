@@ -76,23 +76,6 @@
                     </button>
                 </form>
             </div>
-            </div>
-        </div>
-
-        <div class="column is-half">
-            <div class="column is-half">
-                {{--<div class="block">--}}
-                    {{--<h1 class="title"></h1>--}}
-
-                    {{--<p>--}}
-                        {{----}}
-                    {{--</p>--}}
-                {{--</div>--}}
-
-                {{--<div class="block">--}}
-                    {{--<a class="button is-info" href="/"></a>--}}
-                {{--</div>--}}
-            </div>
         </div>
     </div>
 </section>
