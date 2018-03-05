@@ -5,7 +5,7 @@ We believe that our most valuable resource is the passionate community members w
 ## How does one become a core contributor?
 Contributors who have displayed lasting commitment to the evolution and maintenance of _VotePen_ will be invited to become core contributors. For instance, contributors who:
 - Love to help out other users with issues on GitHub
-- Continue to make _VotePen_ a stable product and encourage features aligned with the [_VotePen_ vision](https://github.com/VotePen/Platform/blob/master/docs/VISION.md)
+- Continue to make _VotePen_ a stable product and encourage features aligned with the [_VotePen_ vision](https://github.com/VotePen/Platform/blob/master/VISION.md)
 
 
 ## As core contributors, we:
@@ -20,7 +20,7 @@ Contributors who have displayed lasting commitment to the evolution and maintena
 
 
 ## While doing these things, we make sure to:
-- Ensure that new contributions fit into the [_VotePen_ vision](https://github.com/VotePen/Platform/blob/master/docs/VISION.md)
+- Ensure that new contributions fit into the [_VotePen_ vision](https://github.com/VotePen/Platform/blob/master/VISION.md)
 - Adhere to the [_VotePen_ Code of Conduct](https://github.com/VotePen/Platform/blob/master/CODE_OF_CONDUCT.md)
 - Maintain backwards compatibility
 - Keep external dependencies to a minimum
