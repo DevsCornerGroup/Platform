@@ -20,7 +20,7 @@ Some people might also use the [_VotePen_ tag on StackOverflow](https://stackove
 
 ## I want to help work on _VotePen_ by reviewing issues and PRs
 
-Thanks! We would really appreciate the help! Feel free to read our document on how to [respond to issues and PRs][responding to prs] and also check out how to become a [core contributor][core contributor].
+Thanks! We would really appreciate the help!
 
 ## Why did my issue/PR get closed?
 
@@ -49,5 +49,4 @@ This project is licensed under the terms of the Apache 2.0 license. See the [LIC
 [core contributor]: CORE_CONTRIBUTOR.md
 [license]: LICENSE.md
 [vision]: VISION.md
-[responding to prs]: RespondingToIssuesAndPullRequests.md
 [firstpr]: YourFirstPR.md
