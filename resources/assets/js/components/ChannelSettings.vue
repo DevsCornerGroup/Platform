@@ -1,96 +1,96 @@
 <template>
-	<section>
-		<h3 class="dotted-title">
-			<span>
-				Avatar
-			</span>
-		</h3>
+    <section>
+        <h3 class="dotted-title">
+            <span>
+                Avatar
+            </span>
+        </h3>
 
-		<div class="form-group">
-			<div class="flex-space">
-				<div>
-					<el-button round plain
-					           class="el-button v-button--upload"
-					           :icon="avatar.uploading ? 'el-icon-loading' : 'el-icon-upload'">
-						{{ avatar.uploading ? 'Uploading...' : 'Click To Browse'}}
+        <div class="form-group">
+            <div class="flex-space">
+                <div>
+                    <div round class="el-button v-button--upload el-button--default is-plain is-round" plain>
+                        <i class="margin-right-half" :class="avatar.uploading ? 'el-icon-loading' : 'el-icon-upload'"></i>
 
-						<input class="v-button"
-						       type="file"
-						       @change="uploadAvatar" />
-					</el-button>
+                        {{ avatar.uploading ? 'Uploading...' : 'Click To Browse'}}
 
-					<p class="go-gray go-small">
-						The Uploaded photo must have a minimum of 
-						<strong>250*250 pixels</strong> with a
-						<strong>ratio of 1/1</strong> (such as a square or circle)
-					</p>
+                        <input class="v-button"
+                               type="file"
+                               @change="uploadAvatar" />
+                    </div>
 
-					<el-alert v-for="e in avatar.errors.photo"
-					          :title="e"
-					          type="error"
-					          :key="e"></el-alert>
-					<el-alert v-for="e in avatar.errors.channel_name"
-					          :title="e"
-					          type="error"
-					          :key="e"></el-alert>
-				</div>
+                    <p class="go-gray go-small">
+                        The Uploaded photo must have a minimum of 
+                        <strong>250*250 pixels</strong> with a
+                        <strong>ratio of 1/1</strong> (such as a square or circle)
+                    </p>
 
-				<div class="edit-avatar-preview">
-					<img :alt="Store.page.channel.temp.name"
-					     :src="Store.page.channel.temp.avatar"
-					     class="circle" />
-				</div>
-			</div>
-		</div>
+                    <el-alert v-for="e in avatar.errors.photo"
+                              :title="e"
+                              type="error"
+                              :key="e"></el-alert>
+                    <el-alert v-for="e in avatar.errors.channel_name"
+                              :title="e"
+                              type="error"
+                              :key="e"></el-alert>
+                </div>
 
-		<h3 class="dotted-title">
-			<span>
-				Settings
-			</span>
-		</h3>
+                <div class="edit-avatar-preview">
+                    <img :alt="Store.page.channel.temp.name"
+                         :src="Store.page.channel.temp.avatar"
+                         class="circle" />
+                </div>
+            </div>
+        </div>
 
-		<el-form label-position="top"
-		         label-width="10px">
-			<el-form-item label="Description">
-				<el-input type="textarea"
-				          :placeholder="'How would you describe #' + Store.page.channel.temp.name + '?'"
-				          name="description"
-				          :autosize="{ minRows: 4, maxRows: 10}"
-				          :maxlength="230"
-				          v-model="description">
-				</el-input>
+        <h3 class="dotted-title">
+            <span>
+                Settings
+            </span>
+        </h3>
 
-				<el-alert v-for="e in errors.description"
-				          :title="e"
-				          type="error"
-				          :key="e"></el-alert>
-			</el-form-item>
+        <el-form label-position="top"
+                 label-width="10px">
+            <el-form-item label="Description">
+                <el-input type="textarea"
+                          :placeholder="'How would you describe #' + Store.page.channel.temp.name + '?'"
+                          name="description"
+                          :autosize="{ minRows: 4, maxRows: 10}"
+                          :maxlength="230"
+                          v-model="description">
+                </el-input>
 
-			<el-form-item label="Cover Color">
-				<el-select v-model="cover_color"
-				           placeholder="Cover Color..."
-				           filterable>
-					<el-option v-for="item in colors"
-					           :key="item"
-					           :label="item"
-					           :value="item">
-					</el-option>
-				</el-select>
-			</el-form-item>
+                <el-alert v-for="e in errors.description"
+                          :title="e"
+                          type="error"
+                          :key="e"></el-alert>
+            </el-form-item>
 
-			<div class="form-toggle no-border">
-				This channel contains mostly NSFW content:
-				<el-switch v-model="nsfw"></el-switch>
-			</div>
+            <el-form-item label="Cover Color">
+                <el-select v-model="cover_color"
+                           placeholder="Cover Color..."
+                           filterable>
+                    <el-option v-for="item in colors"
+                               :key="item"
+                               :label="item"
+                               :value="item">
+                    </el-option>
+                </el-select>
+            </el-form-item>
 
-			<el-form-item v-if="changed">
-				<el-button round type="success"
-				           size="medium"
-				           @click="save"
-				           :loading="sending">Save</el-button>
-			</el-form-item>
-		</el-form>
-	</section>
+            <div class="form-toggle no-border">
+                This channel contains mostly NSFW content:
+                <el-switch v-model="nsfw"></el-switch>
+            </div>
+
+            <el-form-item v-if="changed">
+                <el-button round type="success"
+                           size="medium"
+                           @click="save"
+                           :loading="sending">Save</el-button>
+            </el-form-item>
+        </el-form>
+    </section>
 </template>
 
 <script>
