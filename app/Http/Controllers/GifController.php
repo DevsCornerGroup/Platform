@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Gif;
+use App\Http\Resources\GifResource;
 use App\PhotoTools;
 use Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Pbmedia\LaravelFFMpeg\FFMpegFacade as FFMpeg;
-use App\Http\Resources\GifResource;
 
 class GifController extends Controller
 {
