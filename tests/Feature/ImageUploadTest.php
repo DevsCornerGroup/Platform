@@ -2,30 +2,48 @@
 
 namespace Tests\Feature;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Http\UploadedFile;
-use Illuminate\Support\Facades\Storage;
 use Tests\TestCase;
+use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\UploadedFile;
+use Laravel\Passport\Passport;
+use Illuminate\Foundation\Testing\WithoutMiddleware;
+use Illuminate\Support\Facades\Auth;
 
 class ImageUploadTest extends TestCase
 {
-    use RefreshDatabase;
+    use RefreshDatabase, WithoutMiddleware; 
+
+    public function setUp()
+    {
+        parent::setUp(); 
+
+        Storage::fake('ftp');
+        $this->signInViaPassport();
+    }
 
     /** @test */
-    public function a_user_may_upload_new_avatar_image_via_api()
+    public function user_can_upload_avatar()
     {
-        Storage::fake('ftp');
-
-        $this->signInViaPassport();
-
-        // don't accept non-square images
+        // don't accept non-square images 
         $this->json('POST', '/api/users/avatar', [
-            'photo' => UploadedFile::fake()->image('avatar.png', 250, 100),
+            'photo' => UploadedFile::fake()->image('avatar.png', 250, 100)
         ])->assertStatus(422);
 
-        // accept squar images
+        // accept squar images 
         $uploaded_file_address = $this->json('POST', '/api/users/avatar', [
-            'photo' => UploadedFile::fake()->image('avatar.png', 250, 250),
+            'photo' => UploadedFile::fake()->image('avatar.png', 250, 250)
         ])->assertStatus(200);
+    }
+
+    /** @test */
+    public function user_can_upload_photo()
+    {
+        $this->disableExceptionHandling();        
+        
+        $this->json('POST', '/api/photos', [
+            'file' => UploadedFile::fake()->image('sample.jpg')
+        ])->assertStatus(201);
     }
 }
