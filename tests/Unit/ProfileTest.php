@@ -2,30 +2,28 @@
 
 namespace Tests\Unit;
 
-use Tests\TestCase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Support\Facades\Auth;
+use Tests\TestCase;
 
 class ProfileTest extends TestCase
 {
-    use RefreshDatabase; 
+    use RefreshDatabase;
 
     /** @test */
     public function profile_page_displays_correct_info()
     {
         create('App\User', [
-            'username' => 'JohnDoe', 
-            'name' => 'John Doe', 
-            'location' => 'Earth', 
-            'info' => [
-                'twitter' => 'john_on_twitter', 
-                'website' => 'https://voten.co'
-            ]
+            'username' => 'JohnDoe',
+            'name'     => 'John Doe',
+            'location' => 'Earth',
+            'info'     => [
+                'twitter' => 'john_on_twitter',
+                'website' => 'https://voten.co',
+            ],
         ]);
 
-        $this->get('/@' . 'JohnDoe')
-            ->assertSee('@' . 'JohnDoe')
+        $this->get('/@'.'JohnDoe')
+            ->assertSee('@'.'JohnDoe')
             ->assertSeeText('Earth')
             ->assertSee('john_on_twitter')
             ->assertSee('voten.co')
