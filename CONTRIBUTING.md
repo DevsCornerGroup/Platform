@@ -46,8 +46,8 @@ This project is licensed under the terms of the Apache 2.0 license. See the [LIC
 
 <!-- Links: -->
 [code of conduct]: CODE_OF_CONDUCT.md
-[core contributor]: docs/CORE_CONTRIBUTOR.md
+[core contributor]: CORE_CONTRIBUTOR.md
 [license]: LICENSE.md
-[vision]: docs/VISION.md
-[responding to prs]: docs/RespondingToIssuesAndPullRequests.md
-[firstpr]: docs/YourFirstPR.md
+[vision]: VISION.md
+[responding to prs]: RespondingToIssuesAndPullRequests.md
+[firstpr]: YourFirstPR.md
