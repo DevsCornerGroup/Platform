@@ -1,0 +1,24 @@
+language: php
+
+php:
+  - 7.1
+
+cache:
+  directories:
+  - "$HOME/.composer/cache"
+  - "node_modules"
+
+before_script:
+  - cp .env.circle .env
+  - mysql -u root -e 'create database `homestead`;'
+  - mysql -u root -e "CREATE USER 'homestead'@'localhost' IDENTIFIED BY 'secret';"
+  - mysql -u root -e "GRANT ALL ON \`homestead\`.* TO 'homestead'@'localhost';"
+  - mysql -u root -e "FLUSH PRIVILEGES;"
+  - composer self-update
+  - composer install -n --prefer-dist --ignore-platform-reqs
+  - npm install
+  - php artisan key:generate
+  - php artisan migrate
+
+script:
+  - echo "done";
