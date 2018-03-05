@@ -1,7 +1,6 @@
 <template>
 	<div id="submissions" class="home-submissions" 
-		v-infinite-scroll="loadMore" infinite-scroll-disabled="cantLoadMore" @scroll.passive="scrolled"
-	>
+		 v-infinite-scroll="loadMore" infinite-scroll-disabled="cantLoadMore" @scroll.passive="scrolled">
 		<section class="box-typical comments" v-if="comments.length">
 			<div class="box-typical-inner ui threaded comments">
 				<div v-for="c in uniqueList" :key="c.id" class="v-comment-not-full">
@@ -12,7 +11,7 @@
 
 		<loading v-if="loading"></loading>
 
-		 <no-more-items :text="'No more items to load'" v-if="NoMoreItems && !nothingFound"></no-more-items>
+		<no-more-items :text="'No more items to load'" v-if="NoMoreItems && !nothingFound"></no-more-items>
 	</div>
 </template>
 

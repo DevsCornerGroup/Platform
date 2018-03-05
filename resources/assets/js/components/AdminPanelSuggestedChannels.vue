@@ -49,43 +49,43 @@
         <div class="v-box">
             <table class="table">
                 <thead>
-                <tr>
-                    <th>#channel</th>
-                    <th>Group</th>
-                    <th>Z_Index</th>
-                    <th>Subscribers</th>
-                    <th>Actions</th>
-                </tr>
+                    <tr>
+                        <th>#channel</th>
+                        <th>Group</th>
+                        <th>Z_Index</th>
+                        <th>Subscribers</th>
+                        <th>Actions</th>
+                    </tr>
                 </thead>
 
                 <tbody>
-                <tr v-for="item in list">
-                    <td>
-                        <router-link :to="'/c/' + item.channel.name">
-                            <b>#{{ item.channel.name }}</b>
-                        </router-link>
-                    </td>
+                    <tr v-for="item in list">
+                        <td>
+                            <router-link :to="'/c/' + item.channel.name">
+                                <b>#{{ item.channel.name }}</b>
+                            </router-link>
+                        </td>
 
-                    <td>
-                        {{ item.group }}
-                    </td>
+                        <td>
+                            {{ item.group }}
+                        </td>
 
-                    <td>
-                            <span class="detail">
-                                {{ item.z_index }}
-                            </span>
-                    </td>
+                        <td>
+                                <span class="detail">
+                                    {{ item.z_index }}
+                                </span>
+                        </td>
 
-                    <td>
-                        {{ item.channel.subscribers_count }}
-                    </td>
+                        <td>
+                            {{ item.channel.subscribers_count }}
+                        </td>
 
-                    <td>
-                        <div class="display-flex">
-                            <i class="v-icon v-trash h-red pointer" @click="destroy(item.id)"></i>
-                        </div>
-                    </td>
-                </tr>
+                        <td>
+                            <div class="display-flex">
+                                <i class="v-icon v-trash h-red pointer" @click="destroy(item.id)"></i>
+                            </div>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
