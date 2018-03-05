@@ -15,20 +15,20 @@ class ProfileTest extends TestCase
     public function profile_page_displays_correct_info()
     {
         create('App\User', [
-            'username' => 'JohnDoe', 
-            'name' => 'John Doe', 
+            'username' => 'YoginthS', 
+            'name' => 'Yoginth', 
             'location' => 'Earth', 
             'info' => [
-                'twitter' => 'john_on_twitter', 
-                'website' => 'https://voten.co'
+                'twitter' => 'yoginth_on_twitter', 
+                'website' => 'https://votepen.com'
             ]
         ]);
 
-        $this->get('/@' . 'JohnDoe')
-            ->assertSee('@' . 'JohnDoe')
+        $this->get('/@' . 'YoginthS')
+            ->assertSee('@' . 'YoginthS')
             ->assertSeeText('Earth')
-            ->assertSee('john_on_twitter')
-            ->assertSee('voten.co')
-            ->assertSee('John Doe');
+            ->assertSee('yoginth_on_twitter')
+            ->assertSee('votepen.com')
+            ->assertSee('Yoginth');
     }
 }
