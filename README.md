@@ -9,7 +9,7 @@
   </p>
 </p>
 
-# [VotePen.com](https://votepen.com) [![CircleCI](https://circleci.com/gh/VotePen/Platform/tree/master.svg?style=svg)](https://circleci.com/gh/VotePen/Platform/tree/master) [![DavidDM](https://david-dm.org/VotePen/Platform/status.svg)](https://david-dm.org/VotePen/Platform)
+# [VotePen.com](https://votepen.com) [![CircleCI](https://circleci.com/gh/VotePen/Platform/tree/master.svg?style=svg)](https://circleci.com/gh/VotePen/Platform/tree/master)
 
 [VotePen](https://votepen.com) is a place to Share, upvote, and discuss the best of the internet. To get a quick taste of what VotePen is written with please check our [credits page](https://votepen.com/credits).
 
