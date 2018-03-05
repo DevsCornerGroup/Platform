@@ -222,8 +222,6 @@ class SubmissionVotesController extends Controller
     /**
      * Checks to see if the user is cheating in voting.
      *
-     * (Beta version)
-     *
      * Check to see if there is any record of auth user's IP-address (with different user_id)
      * already voted on the targetted submission. If there is any, return true which means
      * the user is cheating, otherwise return false which means we can update the rate.

@@ -23,7 +23,7 @@
 
 	<script type="application/ld+json">
 	{
-		 "@context": "http://schema.org",
+		 "@context": "https://schema.org",
 		 "@type": "WebSite",
 		 "url": "https://votepen.com",
 		 "name": "VotePen",
@@ -51,7 +51,7 @@
 
 	<script type="application/ld+json">
 	{
-	  "@context":"http://schema.org",
+	  "@context":"https://schema.org",
 	  "@type":"ItemList",
 	  "itemListElement":[
 		{

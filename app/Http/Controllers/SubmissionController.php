@@ -225,7 +225,7 @@ class SubmissionController extends Controller
         abort_unless($this->mustBeOwner($submission), 403);
 
         event(new SubmissionWasDeleted($submission, true));
-        
+
         $submission->forceDelete();
 
         return back();
