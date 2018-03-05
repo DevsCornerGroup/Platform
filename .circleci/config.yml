@@ -15,6 +15,10 @@ jobs:
          name: Download NodeJS v8
          command: curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 
+      - run:
+         name: Install gd library used for image handling
+         command: sudo apt-get install -y libpng-dev
+
       #sqlite needed for laravel database
       #nodejs6 needed to run `npm run watch` later
       - run:
