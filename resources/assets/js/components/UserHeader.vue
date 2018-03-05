@@ -27,29 +27,29 @@
                         <span class="inline-block">
     							<i class="v-icon v-submissions" aria-hidden="true"></i>{{ userStore.stats.submissions_count
                                 }}
-    						</span>
+    					</span>
     
                         <span class="inline-block">
     							<i class="v-icon v-chat" aria-hidden="true"></i>{{ userStore.stats.comments_count }}
-    						</span>
+    					</span>
     
                         <span class="inline-block">
     							<i class="v-icon v-calendar" aria-hidden="true"></i>Joined: {{ date }}
-    						</span>
+    					</span>
     
                         <a :href="userStore.info.website" rel="nofollow" target="_blank" v-if="userStore.info.website" class="inline-block">
                             <i class="v-icon v-link" aria-hidden="true"></i>{{ userStore.info.website }}
                         </a>
     
-                        <span v-if="userStore.location" class="inline-block">
-    							<i class="v-icon v-location" aria-hidden="true"></i>{{ userStore.location }}
-    						</span>
+                        <span v-if="userStore.info.location" class="inline-block">
+                                <i class="v-icon v-location" aria-hidden="true"></i>{{ userStore.info.location }}
+                        </span>
     
                         <span v-if="userStore.info.twitter " class="inline-block">
     							<a :href="'https://twitter.com/' + userStore.info.twitter" rel="nofollow" target="_blank">
     								<i class="v-icon v-twitter" aria-hidden="true"></i>{{ userStore.info.twitter }}
     							</a>
-    						</span>
+    					</span>
                     </div>
     
                     <div class="user-header-right">
