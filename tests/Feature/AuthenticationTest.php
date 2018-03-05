@@ -2,10 +2,10 @@
 
 namespace Tests\Feature;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Tests\TestCase;
-use Illuminate\Support\Facades\Mail;
 use App\Mail\VerifyEmailAddress;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Mail;
+use Tests\TestCase;
 
 class AuthenticationTest extends TestCase
 {
@@ -15,11 +15,11 @@ class AuthenticationTest extends TestCase
     public function a_guest_can_register_via_the_form()
     {
         $this->post('/register', [
-            'username' => 'test_username',
-            'email' => 'test@test.com',
-            'password' => 'password',
+            'username'              => 'test_username',
+            'email'                 => 'test@test.com',
+            'password'              => 'password',
             'password_confirmation' => 'password',
-            'g-recaptcha-response' => 'master_ozzy',
+            'g-recaptcha-response'  => 'master_ozzy',
         ])->assertRedirect('/discover-channels?newbie=1&sidebar=0');
     }
 
@@ -27,11 +27,11 @@ class AuthenticationTest extends TestCase
     public function a_guest_can_login()
     {
         $this->post('/register', [
-            'username' => 'test_username',
-            'email' => 'test@test.com',
-            'password' => 'password',
+            'username'              => 'test_username',
+            'email'                 => 'test@test.com',
+            'password'              => 'password',
             'password_confirmation' => 'password',
-            'g-recaptcha-response' => 'master_ozzy',
+            'g-recaptcha-response'  => 'master_ozzy',
         ]);
 
         $this->get('/logout');
@@ -46,11 +46,11 @@ class AuthenticationTest extends TestCase
     public function a_guest_can_register_via_the_api()
     {
         $this->json('POST', '/register', [
-            'username' => 'test_username',
-            'email' => 'test@test.com',
-            'password' => 'password',
+            'username'              => 'test_username',
+            'email'                 => 'test@test.com',
+            'password'              => 'password',
             'password_confirmation' => 'password',
-            'g-recaptcha-response' => 'master_ozzy',
+            'g-recaptcha-response'  => 'master_ozzy',
         ])->assertJson([
             'message' => 'Registered successfully.',
         ]);
@@ -60,11 +60,11 @@ class AuthenticationTest extends TestCase
     public function a_guest_can_login_via_the_api()
     {
         $this->post('/register', [
-            'username' => 'test_username',
-            'email' => 'test@test.com',
-            'password' => 'password',
+            'username'              => 'test_username',
+            'email'                 => 'test@test.com',
+            'password'              => 'password',
             'password_confirmation' => 'password',
-            'g-recaptcha-response' => 'master_ozzy',
+            'g-recaptcha-response'  => 'master_ozzy',
         ]);
 
         $this->get('/logout');
@@ -83,15 +83,15 @@ class AuthenticationTest extends TestCase
         Mail::fake();
 
         $this->json('POST', '/register', [
-            'username' => 'test_username',
-            'email' => 'test@test.com',
-            'password' => 'password',
+            'username'              => 'test_username',
+            'email'                 => 'test@test.com',
+            'password'              => 'password',
             'password_confirmation' => 'password',
-            'g-recaptcha-response' => 'master_ozzy',
+            'g-recaptcha-response'  => 'master_ozzy',
         ])->assertJson([
             'message' => 'Registered successfully.',
         ]);
 
-        Mail::assertQueued(VerifyEmailAddress::class, 1); 
+        Mail::assertQueued(VerifyEmailAddress::class, 1);
     }
 }
