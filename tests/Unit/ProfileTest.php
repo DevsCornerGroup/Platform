@@ -13,7 +13,6 @@ class ProfileTest extends TestCase
     public function profile_page_displays_correct_info()
     {
         create('App\User', [
-<<<<<<< HEAD
             'username' => 'YoginthS', 
             'name' => 'Yoginth', 
             'location' => 'Earth', 
@@ -25,19 +24,6 @@ class ProfileTest extends TestCase
 
         $this->get('/@' . 'YoginthS')
             ->assertSee('@' . 'YoginthS')
-=======
-            'username' => 'JohnDoe',
-            'name'     => 'John Doe',
-            'location' => 'Earth',
-            'info'     => [
-                'twitter' => 'john_on_twitter',
-                'website' => 'https://voten.co',
-            ],
-        ]);
-
-        $this->get('/@'.'JohnDoe')
-            ->assertSee('@'.'JohnDoe')
->>>>>>> 1f3c9b31d0773d06a068a99e1cdfc589ca1e1034
             ->assertSeeText('Earth')
             ->assertSee('yoginth_on_twitter')
             ->assertSee('votepen.com')
