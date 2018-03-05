@@ -51,3 +51,6 @@
 - [PHP Unit](https://phpunit.de) - PHPUnit is a unit testing framework for the PHP programming language.
 - [Eslint](https://www.npmjs.com/package/eslint) - An AST-based pattern checker for JavaScript.
 - [Aliasify](https://www.npmjs.com/package/aliasify) - Rewrite require calls in browserify modules.
+- [Cloud9 IDE](https://aws.amazon.com/cloud9/) - Cloud9 IDE is an online integrated development environment, published as open source from version 3.0. It supports hundreds of programming languages, including C, C++, PHP, Ruby, Perl, Python, JavaScript with Node.js, and Go.
+- [Sublime Text 3](https://www.sublimetext.com) - Sublime Text is a proprietary cross-platform source code editor with a Python application programming interface.
+- [GitHub](https://github.com) - GitHub is a web-based hosting service for version control using git. It is mostly used for computer code.
