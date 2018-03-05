@@ -27,12 +27,12 @@ Thank you for considering contributing to the VotePen. Here's a list of things y
 
 - [Help Center](https://help.votepen.com)
 - [Installation guide for source code](/INSTALLATION.md)
-- [Roadmap](https://github.com/VotePen/VotePen/projects/2)
+- [Roadmap](https://github.com/VotePen/Platform/projects/1)
 - [Blog](https://medium.com/votepen/)
 - [Twitter](https://twitter.com/VotePen)
 - [API documentation](https://api.votepen.com)
-- [#votepen](https://votepen.com/c/votepen) (for general discussion about VotePen)
-- [#votependev](https://votepen.com/c/votependev) (let’s talk code!)
+- [#votepen](https://votepen.com/c/Votepen) (for general discussion about VotePen)
+- [#votependev](https://votepen.com/c/VotepenDev) (let’s talk code!)
 
 ## API
 
