@@ -134,14 +134,14 @@ class CommentVotesController extends Controller
                 $user->id, $comment->owner->id, $request->previous_vote, $request->comment_id
             );
         } catch (\Exception $e) {
-            return response('invalid request', 500);
+            return response('Invalid Request', 500);
         }
 
-        // If the user is cheating, we just send the "voted successfully" responsd. So
+        // If the user is cheating, we just send the "Voted Successfully" responsd. So
         // the voted model is added to the user's voted lists, but won't be counted
         // in calculating the rate of the model in database. Have fun cheating!
         if ($this->isCheating($user->id, $request->comment_id, 'upvote')) {
-            return response('voted successfully ', 200);
+            return response('Voted Successfully ', 200);
         }
 
         $comment->upvotes = $new_upvotes ?? $comment->upvotes;
@@ -156,7 +156,7 @@ class CommentVotesController extends Controller
 
         $this->putCommentInTheCache($comment);
 
-        return response('voted successfully ', 200);
+        return response('Voted Successfully', 200);
     }
 
     /**
@@ -194,14 +194,14 @@ class CommentVotesController extends Controller
 
             $this->updateUserDownVotesRecords($user->id, $comment->owner->id, $request->previous_vote, $request->comment_id);
         } catch (\Exception $e) {
-            return response('invalid request', 500);
+            return response('Invalid Request', 500);
         }
 
         // If the user is cheating, we just send the "voted successfully" responsd. So
         // the voted model is added to the user's voted lists, but won't be counted
         // in calculating the rate of the model in database. Have fun cheating!
         if ($this->isCheating($user->id, $request->comment_id, 'downvote')) {
-            return response('voted successfully ', 200);
+            return response('Voted Successfully ', 200);
         }
 
         $comment->upvotes = $new_upvotes ?? $comment->upvotes;
@@ -216,13 +216,11 @@ class CommentVotesController extends Controller
 
         $this->putCommentInTheCache($comment);
 
-        return response('voted successfully ', 200);
+        return response('Voted Successfully ', 200);
     }
 
     /**
      * Checks to see if the user is cheating in voting.
-     *
-     * (Beta version)
      *
      * Check to see if there is any record of auth user's IP-address (with different user_id)
      * already voted on the targetted comment. If there is any, return true which means

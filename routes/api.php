@@ -15,7 +15,7 @@ Route::group(['middleware' => ['auth:api']], function () {
     Route::get('/admin/activities', 'AdminController@activities'); // check
     Route::get('/admin/echo', 'AdminController@echoServer'); // check
 
-    // feedback
+    // Feedback
     Route::get('/feedbacks/{feedback}', 'FeedbacksController@get')->middleware('votepen-administrator'); // check
     Route::get('/feedbacks', 'FeedbacksController@index')->middleware('votepen-administrator'); // check
     Route::post('/feedbacks', 'FeedbacksController@store')->middleware('shaddow-ban'); // check
@@ -38,7 +38,7 @@ Route::group(['middleware' => ['auth:api']], function () {
     Route::post('/clientside-settings', 'ClientsideSettingsController@store');
     Route::get('/clientside-settings', 'ClientsideSettingsController@get');
 
-    // submission
+    // Submission
     Route::post('/submissions', 'SubmissionController@store')->middleware('shaddow-ban');
     Route::patch('/submissions/{submission}', 'SubmissionController@patchTextSubmission');
     Route::delete('/submissions/{submission}', 'SubmissionController@destroy');
@@ -52,13 +52,13 @@ Route::group(['middleware' => ['auth:api']], function () {
 
     Route::get('/notifications/unseen', 'NotificationsController@unreadIndex');
 
-    // voting
+    // Voting
     Route::post('/upvote-comment', 'CommentVotesController@upVote')->middleware('shaddow-ban');
     Route::post('/downvote-comment', 'CommentVotesController@downVote')->middleware('shaddow-ban');
     Route::post('/upvote-submission', 'SubmissionVotesController@upVote')->middleware('shaddow-ban');
     Route::post('/downvote-submission', 'SubmissionVotesController@downVote')->middleware('shaddow-ban');
 
-    // bookmarks
+    // Bookmarks
     Route::post('/bookmark-user', 'BookmarksController@bookmarkUser');
     Route::post('/bookmark-comment', 'BookmarksController@bookmarkComment');
     Route::post('/bookmark-channel', 'BookmarksController@bookmarkChannel');
@@ -81,30 +81,30 @@ Route::group(['middleware' => ['auth:api']], function () {
     Route::get('/get-channels', 'ChannelController@getChannels');
     Route::get('/subscribed-channels', 'SubscribeController@index');
 
-    // rule
+    // Rule
     Route::post('/channels/rules', 'RulesController@store');
     Route::patch('/channels/rules', 'RulesController@patch');
     Route::delete('/channels/rules', 'RulesController@destroy');
 
-    // block domain
+    // Block domain
     Route::get('/channels/domains/block', 'BlockDomainController@indexAsChannelModerator')->middleware('moderator');
     Route::post('/channels/domains/block', 'BlockDomainController@storeAsChannelModerator')->middleware('moderator');
     Route::delete('/channels/domains/block', 'BlockDomainController@destroyAsChannelModerator')->middleware('moderator');
-    // (admin)
+    // (Admin)
     Route::get('/admin/domains/block', 'BlockDomainController@indexAsVotePenAdministrator')->middleware('votepen-administrator');
     Route::post('/admin/domains/block', 'BlockDomainController@storeAsVotePenAdministrator')->middleware('votepen-administrator');
     Route::delete('/admin/domains/block', 'BlockDomainController@destroyAsVotePenAdministrator')->middleware('votepen-administrator');
 
-    // ban user
+    // Ban user
     Route::post('/channels/users/banned', 'BanController@storeAsChannelModerator')->middleware('moderator');
     Route::get('/channels/users/banned', 'BanController@indexasChannelModerator')->middleware('moderator');
     Route::delete('/channels/users/banned', 'BanController@destroyAsChannelModerator')->middleware('moderator');
-    // (admin)
+    // (Admin)
     Route::post('/admin/users/banned', 'BanController@storeAsVotePenAdministrator')->middleware('votepen-administrator');
     Route::get('/admin/users/banned', 'BanController@indexAsVotePenAdministrator')->middleware('votepen-administrator');
     Route::delete('/admin/users/banned', 'BanController@destroyAsVotePenAdministrator')->middleware('votepen-administrator');
 
-    // moderation
+    // Moderation
     Route::post('/moderators', 'ModeratorController@store');
     Route::post('/destroy-moderator', 'ModeratorController@destroy');
     Route::post('/approve-comment', 'ModeratorController@approveComment');
@@ -112,13 +112,13 @@ Route::group(['middleware' => ['auth:api']], function () {
     Route::post('/disapprove-comment', 'ModeratorController@disapproveComment');
     Route::post('/disapprove-submission', 'ModeratorController@disapproveSubmission');
 
-    // messages
+    // Messages
     Route::post('/messages', 'MessagesController@store')->middleware('shaddow-ban');
     Route::get('/messages', 'MessagesController@index');
     Route::delete('/messages', 'MessagesController@destroy');
     Route::post('/messages/read', 'MessagesController@markAsRead');
 
-    // conversations
+    // Conversations
     Route::get('/conversations', 'ConversationsController@index');
     Route::delete('/conversations', 'ConversationsController@destroy');
     Route::post('/conversations/read', 'ConversationsController@broadcastConversaionAsRead');
@@ -131,15 +131,15 @@ Route::group(['middleware' => ['auth:api']], function () {
     Route::post('/photos', 'PhotoController@store')->middleware('shaddow-ban');
     Route::post('/gifs', 'GifController@store')->middleware('shaddow-ban');
 
-    // notification
+    // Notification
     Route::get('/notifications', 'NotificationsController@readIndex');
     Route::post('/notifications/seen', 'NotificationsController@markAsRead');
 
-    // subscribe
+    // Subscribe
     Route::post('/subscribe', 'SubscribeController@subscribeToggle')->middleware('shaddow-ban');
     Route::get('/is-subscribed', 'SubscribeController@isSubscribed');
 
-    // report
+    // Report
     Route::post('/comments/reports', 'ReportCommentsController@store')->middleware('shaddow-ban');
     Route::get('/comments/reports', 'ReportCommentsController@index');
     Route::post('/submissions/reports', 'ReportSubmissionsController@store')->middleware('shaddow-ban');

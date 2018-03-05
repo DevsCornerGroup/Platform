@@ -27,6 +27,6 @@ class NotSelfId implements Rule
      */
     public function message()
     {
-        return "Your own account's id is not acceptable.";
+        return "Your own account's ID is not acceptable.";
     }
 }
