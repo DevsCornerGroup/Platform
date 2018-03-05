@@ -2,8 +2,8 @@
 
 namespace App\Http\Resources;
 
-use Illuminate\Http\Resources\Json\Resource;
 use App\Traits\CachableChannel;
+use Illuminate\Http\Resources\Json\Resource;
 
 class ChannelResource extends Resource
 {
@@ -26,7 +26,7 @@ class ChannelResource extends Resource
             'cover_color'       => $this->color,
             'avatar'            => $this->avatar,
             'subscribers_count' => $this->channelStats($this->id)['subscribersCount'],
-            'comments_count' => $this->channelStats($this->id)['commentsCount'],
+            'comments_count'    => $this->channelStats($this->id)['commentsCount'],
             'submissions_count' => $this->channelStats($this->id)['submissionsCount'],
             'created_at'        => optional($this->created_at)->toDateTimeString(),
         ];
