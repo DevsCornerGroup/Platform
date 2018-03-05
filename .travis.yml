@@ -9,7 +9,7 @@ cache:
   - "node_modules"
 
 before_script:
-  - cp .env.circle .env
+  - cp .env.travis .env
   - mysql -u root -e 'create database `homestead`;'
   - mysql -u root -e "CREATE USER 'homestead'@'localhost' IDENTIFIED BY 'secret';"
   - mysql -u root -e "GRANT ALL ON \`homestead\`.* TO 'homestead'@'localhost';"
