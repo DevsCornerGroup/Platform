@@ -32,10 +32,6 @@ import Announcement from './components/Announcement.vue';
 import Tour from './components/Tour';
 import MobileVisitorWarning from './components/MobileVisitorWarning';
 
-import PassportClients from './components/passport/Clients.vue';
-import PassportAuthorizedClients from './components/passport/AuthorizedClients.vue';
-import PassportPersonalAccessTokens from './components/passport/PersonalAccessTokens.vue';
-
 /**
  * This is our event bus, which is used for event dispatching. The base is that we create an empty
  * Vue instance. First we fire the event by: "this.$eventHub.$emit('eventName', 'data')"
@@ -58,10 +54,6 @@ window.app = new Vue({
     mixins: [Helpers, StoreStorage, FontLoader],
 
     components: {
-        PassportClients,
-        PassportAuthorizedClients,
-        PassportPersonalAccessTokens,
-
         KeyboardShortcutsGuide,
         MobileVisitorWarning,
         AuthenticationModal,
@@ -199,7 +191,7 @@ window.app = new Vue({
         },
 
         loginModal() {
-            Store.modals.authentication.show = true;
+            Store.modals.authintication.show = true;
         },
 
         openMarkdownGuide() {
@@ -217,7 +209,7 @@ window.app = new Vue({
 
             Push.create(data.title, {
                 body: data.body,
-                icon: data.icon ? data.icon : 'https://cdn.jsdelivr.net/npm/votepen-cdn@1.0.0/imgs/v-logo.png',
+                icon: data.icon ? data.icon : '/imgs/v-logo.png',
                 timeout: 5000,
                 onClick: function() {
                     if (data.url == 'new-message') {
