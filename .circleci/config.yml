@@ -1,19 +1,8 @@
-# PHP CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-php/ for more details
-#
 version: 2
 jobs:
   build:
     docker:
-      # specify the version you desire here
       - image: circleci/php:7.1-cli
-
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mysql:9.4
-
       - image: redis
 
     working_directory: ~/laravel
@@ -37,7 +26,7 @@ jobs:
   
       - run:
          name: Install PHP Extensions
-         command: sudo docker-php-ext-configure gd
+         command: sudo docker-php-ext-install gd
 
       - run:
          name: Setup Laravel testing environment variables for CircleCI test
@@ -77,4 +66,4 @@ jobs:
          command: php artisan serve
          background: true
 
-      # - run: vendor/bin/phpunit
+      - run: vendor/bin/phpunit
