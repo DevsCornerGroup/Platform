@@ -17,7 +17,7 @@
 
 Thank you for considering contributing to the VotePen. Here's a list of things you can do to support VotePen:
 
-- **Discuss** VotePen's development at  [#votependev](https://votepen.com/c/votependev) channel. (VotePen's editor supports markdown syntax just like Github's)
+- **Discuss** VotePen's development at  [#VotePenDev](https://votepen.com/c/VotePenDev) channel. (VotePen's editor supports markdown syntax just like Github's)
 - **Send PRs**. VotePen uses Gitbook for [help center](https://help.votepen.com) and [API documentation](https://api.votepen.com), and Github to host our source code. All of which support PRs. 
 - **Follow** us on [Twitter](https://twitter.com/VotePen) 
 - If you're a blogger, write about VotePen. If you're a user on Reddit, Twitter, etc, spread the word. 
