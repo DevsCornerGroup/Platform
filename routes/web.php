@@ -95,9 +95,9 @@ Route::post('/ssh/flush-all', 'SSHController@flushAll');
 Route::post('/ssh/cache-clear', 'SSHController@clearCache');
 Route::post('/ssh/stop-maintenance', 'SSHController@stopMaintenanceMode');
 Route::post('/ssh/start-maintenance', 'SSHController@startMaintenanceMode');
-Route::post('/ssh/route-clear', 'SSHController@routeClear');	
-Route::post('/ssh/stop-maintenance', 'SSHController@stopMaintenanceMode');	
-Route::post('/ssh/start-maintenance', 'SSHController@startMaintenanceMode');	
+Route::post('/ssh/route-clear', 'SSHController@routeClear');
+Route::post('/ssh/stop-maintenance', 'SSHController@stopMaintenanceMode');
+Route::post('/ssh/start-maintenance', 'SSHController@startMaintenanceMode');
 Route::post('/ssh/reboot-server', 'SSHController@rebootServer');
 
 // Passport
