@@ -80,9 +80,9 @@ class BanController extends Controller
         DB::table('roles')->where('user_id', $user->id)->delete();
         DB::table('conversations')->where('user_id', $user->id)->orWhere('contact_id', $user->id)->delete();
 
-        // BAN DURATION: if the duration is set as 0 we set a really big number like 17 years!
+        // BAN DURATION: if the duration is set as 0 we set a really big number like 50 years!
         if ($request->duration == 0) {
-            $unban_at = Carbon::now()->addYears(17);
+            $unban_at = Carbon::now()->addYears(50);
         } else {
             $unban_at = Carbon::now()->addDays($request->duration);
         }
