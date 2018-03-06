@@ -68,6 +68,8 @@ class BanController extends Controller
             'duration'    => 'integer|min:0|max:999',
             'description' => 'nullable|string|max:5000',
         ]);
+        
+        session()->flash('status', "Successfully Banned");
 
         $user = User::where('username', $request->username)->firstOrFail();
 
