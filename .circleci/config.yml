@@ -1,8 +1,19 @@
+# PHP CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-php/ for more details
+#
 version: 2
 jobs:
   build:
     docker:
+      # specify the version you desire here
       - image: circleci/php:7.1-cli
+
+      # Specify service dependencies here if necessary
+      # CircleCI maintains a library of pre-built images
+      # documented at https://circleci.com/docs/2.0/circleci-images/
+      # - image: circleci/mysql:9.4
+
       - image: redis
 
     working_directory: ~/laravel
@@ -17,16 +28,12 @@ jobs:
       #sqlite needed for laravel database
       #nodejs6 needed to run `npm run watch` later
       - run:
-         name: Install PHP sqlite and nodejs 8
-         command: sudo apt-get install -y libsqlite3-dev nodejs
+          name: Install PHP sqlite and nodejs 8
+          command: sudo apt-get install -y libsqlite3-dev nodejs
       
       - run:
-         name: Install gd library used for image handling
-         command: sudo apt-get install -y libpng-dev libjpeg-dev
-  
-      - run:
-         name: Install PHP Extensions
-         command: sudo docker-php-ext-install gd
+          name: Install GD library 
+          command: sudo apt-get install -y libfreetype6-dev libjpeg62-turbo-dev libpng-dev && sudo docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ && sudo docker-php-ext-install -j$(nproc) gd
 
       - run:
          name: Setup Laravel testing environment variables for CircleCI test
@@ -66,4 +73,4 @@ jobs:
          command: php artisan serve
          background: true
 
-      # - run: vendor/bin/phpunit
+      - run: vendor/bin/phpunit
