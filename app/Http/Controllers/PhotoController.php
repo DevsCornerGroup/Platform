@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Channel;
+use App\Http\Resources\PhotoResource;
 use App\Photo;
 use App\PhotoTools;
 use App\Traits\CachableChannel;
@@ -11,7 +12,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rule;
 use Intervention\Image\ImageManagerStatic as Image;
-use App\Http\Resources\PhotoResource;
 
 class PhotoController extends Controller
 {

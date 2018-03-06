@@ -2,10 +2,13 @@
 
 namespace App\Http\Resources;
 
+use App\Traits\CachableChannel;
 use Illuminate\Http\Resources\Json\Resource;
 
 class ChannelResource extends Resource
 {
+    use CachableChannel;
+
     /**
      * Transform the resource into an array.
      *
@@ -22,7 +25,9 @@ class ChannelResource extends Resource
             'nsfw'              => (bool) $this->nsfw,
             'cover_color'       => $this->color,
             'avatar'            => $this->avatar,
-            'subscribers_count' => $this->subscribers,
+            'subscribers_count' => $this->channelStats($this->id)['subscribersCount'],
+            'comments_count'    => $this->channelStats($this->id)['commentsCount'],
+            'submissions_count' => $this->channelStats($this->id)['submissionsCount'],
             'created_at'        => optional($this->created_at)->toDateTimeString(),
         ];
     }
