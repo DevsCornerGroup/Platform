@@ -99,7 +99,7 @@ class BanController extends Controller
 
         $bannedUser->user = $user;
 
-        return new BannedUserResource($bannedUser);
+        return back();
     }
 
     /**
