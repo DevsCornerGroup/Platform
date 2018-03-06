@@ -70,8 +70,8 @@ Route::post('/backend/channels/{channel}/takeover', 'BackendController@takeOverC
 Route::get('/backend/users', 'BackendController@showUsers');
 Route::get('/backend/users/{user}', 'BackendController@showUser');
 Route::delete('/backend/users/destroy', 'UserController@destroy');
-Route::post('/ban-user', 'BanController@store');
-Route::delete('/ban-user/destroy', 'BanController@destroy');
+Route::post('/ban-user', 'BanController@storeAsVotePenAdministrator');
+Route::delete('/ban-user/destroy', 'BanController@destroyAsVotePenAdministrator');
 Route::post('/backend/firewall/ip/store', 'FirewallController@store');
 Route::delete('/backend/firewall/ip/destroy', 'FirewallController@destroy');
 Route::get('/backend/spams/multiple-accounts', 'Backend\SpamsController@multipleAccounts');
