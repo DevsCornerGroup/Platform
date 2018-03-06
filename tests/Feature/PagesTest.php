@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use Tests\TestCase;
+use Illuminate\Foundation\Testing\FreshDatabase;
 
 class PagesTest extends TestCase
 {
