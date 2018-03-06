@@ -4,16 +4,13 @@
 Route::redirect('/api', 'https://api.votepen.com', 301);
 Route::redirect('/help', 'https://help.votepen.com', 301);
 Route::redirect('/help-center', 'https://help.votepen.com', 301);
-Route::redirect('/source-code', 'https://gitlab.com/VotePen/Platform', 301);
+Route::redirect('/source-code', 'https://github.com/VotePen/Platform', 301);
 Route::redirect('/blog', 'https://medium.com/votepen', 301);
 Route::redirect('/dev', '/c/votependev', 301);
 Route::redirect('/developers', '/c/votependev', 301);
-Route::get('/embed/link', 'EmbedController@link');
-Route::get('/embed/title', 'EmbedController@title');
-Route::get('/link-submission', 'EmbedController@linkSubmission');
 
 Route::group(['middleware' => ['maintenance', 'http2']], function () {
-    // Authentication routes
+    // Authintication routes
     Route::auth();
     Route::get('/logout', 'Auth\LoginController@logout');
 
@@ -46,7 +43,7 @@ Route::group(['middleware' => ['maintenance', 'http2']], function () {
 });
 
 Route::group(['prefix' => 'api', 'middleware' => ['maintenance']], function () {
-    // Authentication routes
+    // Authintication routes
     Route::auth();
     Route::get('/logout', 'Auth\LoginController@logout');
     Route::post('/guest/login', 'Auth\LoginController@login');
@@ -94,14 +91,10 @@ Route::post('/backend/channel-removal-warnings/send', 'WarningsController@channe
 Route::get('/emails/announcement/preview', 'EmailsController@preview');
 
 // ssh control
-Route::post('/ssh/flush-all', 'SSHController@flushAll');
-Route::post('/ssh/cache-clear', 'SSHController@clearCache');
-Route::post('/ssh/view-clear', 'SSHController@viewClear');
-Route::post('/ssh/config-clear', 'SSHController@configClear');
-Route::post('/ssh/route-clear', 'SSHController@routeClear');
-Route::post('/ssh/stop-maintenance', 'SSHController@stopMaintenanceMode');
-Route::post('/ssh/start-maintenance', 'SSHController@startMaintenanceMode');
-Route::post('/ssh/reboot-server', 'SSHController@rebootServer');
+Route::post('/ssh/flush-all', 'SshController@flushAll');
+Route::post('/ssh/cache-clear', 'SshController@clearCache');
+Route::post('/ssh/stop-maintenance', 'SshController@stopMaintenanceMode');
+Route::post('/ssh/start-maintenance', 'SshController@startMaintenanceMode');
 
 // Passport
 Route::get('/apps', 'OAuthController@show');
