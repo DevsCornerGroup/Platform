@@ -65,17 +65,17 @@ return [
             'strict'    => false,
             'engine'    => null,
         ],
-        
+
         'mysql_testing' => [
-            'driver' => 'mysql',
-            'host' => '127.0.0.1',
-            'database' => 'votepen-test',
-            'username' => env('MYSQL_USER', 'votepen-test'),
-            'password' => env('MYSQL_PASSWORD', 'votepen-test'),
-            'charset' => 'utf8',
+            'driver'    => 'mysql',
+            'host'      => '127.0.0.1',
+            'database'  => 'votepen-test',
+            'username'  => env('MYSQL_USER', 'votepen-test'),
+            'password'  => env('MYSQL_PASSWORD', 'votepen-test'),
+            'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
-            'prefix' => '',
-            'strict' => false,
+            'prefix'    => '',
+            'strict'    => false,
         ],
 
         'pgsql' => [
