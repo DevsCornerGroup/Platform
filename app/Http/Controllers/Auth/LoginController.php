@@ -5,14 +5,14 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Mail\WelcomeToVotePen;
 use App\PhotoTools;
+use App\Traits\ApiAuthentication;
 use App\User;
 use Auth;
-use Illuminate\Http\Request;
 use Faker\Factory as Faker;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
 use Socialite;
 use WhichBrowser\Parser;
-use App\Traits\ApiAuthentication;
 
 class LoginController extends Controller
 {
@@ -34,8 +34,9 @@ class LoginController extends Controller
     /**
      * The user has been authenticated.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  mixed  $user
+     * @param \Illuminate\Http\Request $request
+     * @param mixed                    $user
+     *
      * @return mixed
      */
     protected function authenticated(Request $request, $user)
@@ -251,9 +252,9 @@ class LoginController extends Controller
     /* --------------------------------------------------------------------- */
 
     /**
-     * Logins and createa a valid access token. 
-     * 
-     * @return JSON 
+     * Logins and createa a valid access token.
+     *
+     * @return JSON
      */
     public function getAccessToken(Request $request)
     {
