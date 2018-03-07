@@ -10,7 +10,7 @@ cache:
 before_script:
     - cp .env.travis .env
     - mysql -u root -e 'create database `votepen-test`;'
-    - mysql -u root -e "CREATE USER 'votepen-test'@'localhost' IDENTIFIED BY 'votepen-test';"
+    - mysql -u root -e "CREATE USER 'votepen-test'@'localhost' IDENTIFIED BY 'secret';"
     - mysql -u root -e "GRANT ALL ON \`votepen-test\`.* TO 'votepen-test'@'localhost';"
     - mysql -u root -e "FLUSH PRIVILEGES;"
     - phpenv config-rm xdebug.ini
