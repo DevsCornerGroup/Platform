@@ -50,6 +50,7 @@
 <style lang="scss">
 .subscribe-icon {
     font-weight: 600;
+    font-size: 25px;
     margin-left: 0.5em;
     cursor: pointer;
 }
