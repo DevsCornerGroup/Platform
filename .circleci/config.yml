@@ -60,4 +60,4 @@ jobs:
          command: php artisan serve
          background: true
 
-      - run: /vendor/bin/phpunit
+      - run: vendor/bin/phpunit
