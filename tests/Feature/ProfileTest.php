@@ -2,31 +2,32 @@
 
 namespace Tests\Feature;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
+use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class ProfileTest extends TestCase
 {
-    use RefreshDatabase;
+    use RefreshDatabase; 
 
     /** @test */
     public function profile_page_displays_correct_info()
     {
         create('App\User', [
-            'username' => 'YoginthS',
-            'name'     => 'Yoginth',
-            'location' => 'Earth',
-            'info'     => [
-                'twitter' => 'yoginth_on_twitter',
-                'website' => 'https://votepen.com',
-            ],
+            'username' => 'JohnDoe', 
+            'name' => 'John Doe', 
+            'location' => 'Earth', 
+            'info' => [
+                'twitter' => 'john_on_twitter', 
+                'website' => 'https://voten.co'
+            ]
         ]);
 
-        $this->get('/@'.'YoginthS')
-            ->assertSee('@'.'YoginthS')
+        $this->get('/@' . 'JohnDoe')
+            ->assertSee('@' . 'JohnDoe')
             ->assertSeeText('Earth')
-            ->assertSee('yoginth_on_twitter')
-            ->assertSee('votepen.com')
-            ->assertSee('Yoginth');
+            ->assertSee('john_on_twitter')
+            ->assertSee('voten.co')
+            ->assertSee('John Doe');
     }
 }

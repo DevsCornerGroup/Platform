@@ -12,11 +12,11 @@ class MentionUsersTest extends TestCase
     /** @test */
     public function mentioned_users_in_a_comment_are_notified()
     {
-        $john = create('App\User', ['username' => 'YoginthS']);
+        $john = create('App\User', ['username' => 'JohnDoe']);
 
         $this->signIn($john);
 
-        $jane = create('App\User', ['username' => 'Yoginth']);
+        $jane = create('App\User', ['username' => 'JaneDoe']);
 
 //
 //        $this->json('post', '/comment', [
