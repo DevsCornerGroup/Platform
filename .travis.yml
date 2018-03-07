@@ -18,4 +18,4 @@ after_failure:
     - cat storage/logs/laravel.log
 
 script:
-    - ./vendor/bin/phpcs
+    - /vendor/bin/phpunit
