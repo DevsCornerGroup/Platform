@@ -12,10 +12,13 @@ before_script:
     - phpenv config-rm xdebug.ini
     - composer install --prefer-dist --no-interaction
     - touch database/database.sqlite
+    - php artisan optimize
+    - php artisan view:clear
+    - php artisan cache:clear
     - php artisan migrate
 
 after_failure:
     - cat storage/logs/laravel.log
 
 script:
-    - /vendor/bin/phpunit
+    - vendor/bin/phpunit
