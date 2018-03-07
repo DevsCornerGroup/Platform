@@ -13,6 +13,7 @@ before_script:
     - mysql -u root -e "CREATE USER 'votepen-test'@'localhost' IDENTIFIED BY 'secret';"
     - mysql -u root -e "GRANT ALL ON \`votepen-test\`.* TO 'votepen-test'@'localhost';"
     - mysql -u root -e "FLUSH PRIVILEGES;"
+    - mysql -u root -e "use votepen-test;"
     - mysql -u root -e "create table yogi(name integer);"
     - phpenv config-rm xdebug.ini
     - composer install --prefer-dist --no-interaction
