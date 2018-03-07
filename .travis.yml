@@ -1,0 +1,28 @@
+dist: trusty
+sudo: false
+language: php
+php:
+- '7.1'
+cache:
+  directories:
+  - "$HOME/.composer/cache"
+
+before_script:
+    - cp .env.travis .env
+    - mysql -u root -e 'create database `votepen-test`;'
+    - mysql -u root -e "CREATE USER 'votepen-test'@'localhost' IDENTIFIED BY 'votepen-test';"
+    - mysql -u root -e "GRANT ALL ON \`votepen-test\`.* TO 'votepen-test'@'localhost';"
+    - mysql -u root -e "FLUSH PRIVILEGES;"
+    - phpenv config-rm xdebug.ini
+    - composer install --prefer-dist --no-interaction
+    - php artisan clear-compiled -n
+    - php artisan optimize -n
+    - php artisan view:clear
+    - php artisan cache:clear
+    - php artisan migrate --force -n --database=mysql_testing
+
+after_failure:
+    - cat storage/logs/laravel.log
+
+script:
+    - ./vendor/bin/phpcs
