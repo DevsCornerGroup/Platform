@@ -15,10 +15,6 @@ before_script:
     - mysql -u root -e "FLUSH PRIVILEGES;"
     - phpenv config-rm xdebug.ini
     - composer install --prefer-dist --no-interaction
-    - php artisan clear-compiled -n
-    - php artisan optimize -n
-    - php artisan view:clear
-    - php artisan cache:clear
     - php artisan migrate --force -n --database=mysql_testing
 
 after_failure:
