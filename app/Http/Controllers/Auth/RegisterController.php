@@ -6,13 +6,13 @@ use App\Http\Controllers\Controller;
 use App\Mail\VerifyEmailAddress;
 use App\Rules\NotForbiddenUsername;
 use App\Rules\Recaptcha;
+use App\Traits\ApiAuthentication;
 use App\User;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Validator;
-use App\Traits\ApiAuthentication;
 
 class RegisterController extends Controller
 {
@@ -66,7 +66,7 @@ class RegisterController extends Controller
                 'notify_comments_replied'       => true,
                 'notify_mentions'               => true,
             ],
-            
+
             'info'    => [
                 'website' => null,
                 'twitter' => null,
@@ -83,8 +83,8 @@ class RegisterController extends Controller
      */
     protected function pleaseConfirmEmailAddress($user)
     {
-        if (! $user->email) {
-            return; 
+        if (!$user->email) {
+            return;
         }
 
         $token = str_random(60);
@@ -158,9 +158,9 @@ class RegisterController extends Controller
     /* --------------------------------------------------------------------- */
 
     /**
-     * Logins and createa a valid access token. 
-     * 
-     * @return JSON 
+     * Logins and createa a valid access token.
+     *
+     * @return JSON
      */
     public function getAccessToken(Request $request)
     {
