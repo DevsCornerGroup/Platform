@@ -1,8 +1,3 @@
-User-agent: *
-Disallow: /backend/
-Disallow: /login/
-Disallow: /register/
-
 User-agent: NinjaBot
 Allow: /
 
@@ -15,8 +10,34 @@ Allow: /images/uploads/
 User-agent: Adsbot-Google
 Allow: /
 
-
 User-agent: Googlebot-Mobile
+Allow: /
+
+User-agent: 008
+Disallow: /
+
+User-agent: voltron
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: PiplBot
+Disallow: /
+
+User-Agent: *
+Disallow: /backend/
+Disallow: /login/
+Disallow: /register/
+Disallow: /*.json
+Disallow: /login
+Disallow: /#search
+Disallow: /#preferences
+Disallow: /#keyboardShortcutsGuide
+Disallow: /logout
+Disallow: /subscriptions
+Disallow: /discover-channels
+Allow: /sitemaps/*.xml
 Allow: /
 
 Sitemap: https://votepen.com/sitemap.xml
