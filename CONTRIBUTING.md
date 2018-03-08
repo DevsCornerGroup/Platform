@@ -22,15 +22,26 @@ Some people might also use the [_VotePen_ tag on StackOverflow](https://stackove
 
 Thanks! We would really appreciate the help!
 
-## Why did my issue/PR get closed?
+## Reporting new issues
 
-It's not you, it's us! _VotePen_ and its related dependencies receive a lot of issues and PRs. In order to effectively work through them and give each the prompt attention it deserves, we need to keep a sharp focus on the work we have outstanding.
+When [opening a new issue](https://github.com/VotePen/Platform/issues/new), always make sure to fill out the [issue template](https://raw.githubusercontent.com/VotePen/Platform/master/.github/ISSUE_TEMPLATE.md). **This step is very important!** Not doing so may result in your issue not managed in a timely fashion. Don't take this personally if this happens, and feel free to open a new issue once you've gathered all the information required by the template.
 
-One way we do this is by closing issues that we don't feel are immediately actionable. This might mean that we need more information in order to investigate. Or, it might mean that we haven't been able to reproduce it using the provided info. In this case we might close the issue while we wait for others to reproduce the problem and possibly provide some more info that unlocks the mystery.
+* **One issue, one bug:** Please report a single bug per issue.
+* **Provide reproduction steps:** List all the steps necessary to reproduce the issue. The person reading your bug report should be able to follow these steps to reproduce your issue with minimal effort.
 
-In any case, **a closed issue is not necessarily the end of the story!** If more info becomes available after an issue is closed, it can be reopened for further consideration.
+### Security bugs
 
-One of the best ways we can keep _VotePen_ an approachable and stable is to be deliberate about how we choose to modify it. If we don't adopt your changes or new feature into _VotePen,_ that doesn't mean it was bad work! It may be that the _VotePen_ philosophy about how to accomplish a particular task doesn't align well with your approach. The best way to make sure that your time is well spent in contributing to _VotePen_ is to **start your work** on a modification or new feature **by opening an issue to discuss the problem or shortcoming with the community**. The _VotePen_ maintainers will do our best to give early feedback about whether a particular goal and approach is likely to be something we want to adopt!
+VotePen has a [bounty program](https://votepen.com/whitehat/) for the safe disclosure of security bugs. With that in mind, please do not file public issues; just mail us on bugs@votepen.com.
+
+## Pull requests
+
+### Your first pull request
+
+So you have decided to contribute code back to upstream by opening a pull request. You've invested a good chunk of time, and we appreciate it. We will do our best to work with you and get the PR looked at.
+
+Working on your first Pull Request? You can learn how from this free video series:
+
+[**How to Contribute to an Open Source Project on GitHub**](https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github)
 
 ## Code of Conduct
 
