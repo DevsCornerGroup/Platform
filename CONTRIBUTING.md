@@ -16,7 +16,7 @@ Some people might also use the [_VotePen_ tag on StackOverflow](https://stackove
 
 ## I want to contribute to _VotePen_
 
-- To start working on _VotePen_, check out [YourFirstPR.md][firstpr]
+- To start working on _VotePen_, check out [How to Contribute to an Open Source Project on GitHub][firstpr]
 
 ## I want to help work on _VotePen_ by reviewing issues and PRs
 
@@ -49,4 +49,4 @@ This project is licensed under the terms of the Apache 2.0 license. See the [LIC
 [core contributor]: CORE_CONTRIBUTOR.md
 [license]: LICENSE.md
 [vision]: VISION.md
-[firstpr]: YourFirstPR.md
+[firstpr]: https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github
