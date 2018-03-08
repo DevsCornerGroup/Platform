@@ -21,7 +21,7 @@
   Now scroll below!
 -->
 
-### Have you read the [Contributing Guidelines on issues](CONTRIBUTING.md#reporting-new-issues)?
+### Have you read the [Contributing Guidelines on issues](https://github.com/VotePen/Platform/blob/master/CONTRIBUTING.md#reporting-new-issues)?
 
 (Write your answer here.)
 
