@@ -9,7 +9,7 @@ Route::redirect('/blog', 'https://medium.com/votepen', 301);
 Route::redirect('/dev', '/c/votependev', 301);
 Route::redirect('/developers', '/c/votependev', 301);
 
-Route::group(['middleware' => ['maintenance', 'http2']], function () {
+Route::group(['middleware' => ['http2']], function () {
     // Authintication routes
     Route::auth();
     Route::get('/logout', 'Auth\LoginController@logout');
@@ -42,7 +42,7 @@ Route::group(['middleware' => ['maintenance', 'http2']], function () {
     Route::get('/channels.xml', 'SitemapsController@channels');
 });
 
-Route::group(['prefix' => 'api', 'middleware' => ['maintenance']], function () {
+Route::group(['prefix' => 'api'], function () {
     // Authintication routes
     Route::auth();
     Route::get('/logout', 'Auth\LoginController@logout');
@@ -96,14 +96,11 @@ Route::post('/ssh/cache-clear', 'SSHController@clearCache');
 Route::post('/ssh/stop-maintenance', 'SSHController@stopMaintenanceMode');
 Route::post('/ssh/start-maintenance', 'SSHController@startMaintenanceMode');
 Route::post('/ssh/route-clear', 'SSHController@routeClear');
-Route::post('/ssh/stop-maintenance', 'SSHController@stopMaintenanceMode');
-Route::post('/ssh/start-maintenance', 'SSHController@startMaintenanceMode');
-Route::post('/ssh/reboot-server', 'SSHController@rebootServer');
 
 // Passport
 // Route::get('/apps', 'OAuthController@show');
 
 // catch wild routes
-Route::group(['middleware' => ['maintenance', 'http2', 'auth']], function () {
+Route::group(['middleware' => ['http2', 'auth']], function () {
     Route::get('/{any}', 'PagesController@welcome')->where('any', '.*');
 });
