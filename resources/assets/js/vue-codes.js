@@ -44,7 +44,7 @@ import MobileVisitorWarning from './components/MobileVisitorWarning';
 Vue.prototype.$eventHub = new Vue();
 
 /**
- * The very serious and important vue instance!!! This is what gives power to VotePen's
+ * The very serious and important vue instance!!! This is what gives power to voten's
  * front-end. Try to love it, maintain it, appriciate it and maybe even more! This
  * also plays a role in switching states and maintaining the Store.
  */
@@ -347,4 +347,4 @@ window.app = new Vue({
             }
         }
     }
-}).$mount('#votepen-app');
+}).$mount('#voten-app');
