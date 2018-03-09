@@ -19,26 +19,24 @@ class ImageUploadTest extends TestCase
     {
         parent::setUp(); 
 
-        Storage::fake('ftp');
+        Storage::fake('images');
         $this->signInViaPassport();
     }
 
     /** @test */
     public function user_can_upload_avatar()
     {
-        Storage::fake('avatars');
-        
         // don't accept non-square images 
-        $response = $this->json('POST', '/api/users/avatar', [
-            'photo' => UploadedFile::fake()->image('false.png', 250, 100)
+        $this->json('POST', '/api/users/avatar', [
+            'photo' => UploadedFile::fake()->image('avatar.png', 250, 100)
         ])->assertStatus(422);
 
         // accept square images 
-        $response = $this->json('POST', '/api/users/avatar', [
-            'photo' => UploadedFile::fake()->image('true.png', 250, 250)
+        $this->json('POST', '/api/users/avatar', [
+            'photo' => UploadedFile::fake()->image('avatar.png', 250, 250)
         ]);
         
-        Storage::disk('avatars')->assertExists('true.png');
+        Storage::disk('images')->assertExists('avatar.png');
     }
 
     /** @test */
