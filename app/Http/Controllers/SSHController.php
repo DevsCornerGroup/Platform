@@ -81,45 +81,4 @@ class SSHController extends Controller
 
         return back();
     }
-
-    /**
-     * clears the artisan cache.
-     *
-     * @return redirect
-     */
-    public function startMaintenanceMode()
-    {
-        Artisan::call('down');
-
-        return back();
-    }
-
-    /**
-     * clears the artisan cache.
-     *
-     * @return redirect
-     */
-    public function stopMaintenanceMode()
-    {
-        Artisan::call('up');
-
-        return back();
-    }
-
-    /**
-     * clears the artisan cache.
-     *
-     * @return redirect
-     */
-    public function rebootServer()
-    {
-        SSH::run([
-            'cd /var/www/html',
-            'git pull',
-        ]);
-
-        session()->flash('status', 'Reboot Server');
-
-        return back();
-    }
 }
