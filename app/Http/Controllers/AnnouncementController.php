@@ -108,12 +108,15 @@ class AnnouncementController extends Controller
             'announcement_id' => 'required|integer',
         ]);
 
-        DB::table('seen_announcements')->insert([
-            'user_id'         => Auth::user()->id,
-            'announcement_id' => $request->announcement_id,
-        ]);
+        try {
+            DB::table('seen_announcements')->insert([
+                'user_id'         => Auth::user()->id,
+                'announcement_id' => $request->announcement_id,
+            ]);
+        } catch (\Exception $exception) {
+        }
 
-        return response('Announcement has been marked as seen.', 200);
+        return res(200, 'Announcement has been marked as seen.');
     }
 
     /**
@@ -132,6 +135,6 @@ class AnnouncementController extends Controller
 
         $announcement->delete();
 
-        return $request->ajax() ? response('Announcement has beeen deleted successfully.') : back();
+        return res(200, 'Announcement has beeen deleted successfully');
     }
 }
