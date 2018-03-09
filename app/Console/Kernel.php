@@ -1,72 +1,41 @@
 <?php
 
-namespace App\Http;
+namespace App\Console;
 
-use App\Http\Middleware\Firewall;
-use App\Http\Middleware\LoadDefaultViewForAuthinticatedUsers;
-use App\Http\Middleware\MustBeAdministrator;
-use App\Http\Middleware\MustBeModerator;
-use App\Http\Middleware\MustBeVotePenAdministrator;
-use App\Http\Middleware\ShadowBan;
-use Illuminate\Foundation\Http\Kernel as HttpKernel;
+use Illuminate\Console\Scheduling\Schedule;
+use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
-class Kernel extends HttpKernel
+class Kernel extends ConsoleKernel
 {
     /**
-     * The application's global HTTP middleware stack.
-     *
-     * These middleware are run during every request to your application.
+     * The Artisan commands provided by your application.
      *
      * @var array
      */
-    protected $middleware = [
-        \App\Http\Middleware\TrimStrings::class,
-        \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
-        Firewall::class,
-        \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
+    protected $commands = [
+         Commands\Inspire::class,
     ];
 
     /**
-     * The application's route middleware groups.
+     * Define the application's command schedule.
      *
-     * @var array
+     * @param \Illuminate\Console\Scheduling\Schedule $schedule
+     *
+     * @return void
      */
-    protected $middlewareGroups = [
-        'web' => [
-            \App\Http\Middleware\EncryptCookies::class,
-            \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
-            \Illuminate\Session\Middleware\StartSession::class,
-            \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-            \App\Http\Middleware\VerifyCsrfToken::class,
-            \Illuminate\Routing\Middleware\SubstituteBindings::class,
-            \Laravel\Passport\Http\Middleware\CreateFreshApiToken::class,
-        ],
-
-        'api' => [
-            'throttle:120,1',
-            'bindings',
-        ],
-    ];
+    protected function schedule(Schedule $schedule)
+    {
+        // $schedule->command('inspire')
+        //          ->hourly();
+    }
 
     /**
-     * The application's route middleware.
+     * Register the Closure based commands for the application.
      *
-     * These middleware may be assigned to groups or used individually.
-     *
-     * @var array
+     * @return void
      */
-    protected $routeMiddleware = [
-        'auth'                  => \Illuminate\Auth\Middleware\Authenticate::class,
-        'auth.basic'            => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
-        'bindings'              => \Illuminate\Routing\Middleware\SubstituteBindings::class,
-        'can'                   => \Illuminate\Auth\Middleware\Authorize::class,
-        'guest'                 => \App\Http\Middleware\RedirectIfAuthenticated::class,
-        'throttle'              => \Illuminate\Routing\Middleware\ThrottleRequests::class,
-        'http2'                 => \JacobBennett\Http2ServerPush\Middleware\AddHttp2ServerPush::class,
-        'correct-view'          => LoadDefaultViewForAuthinticatedUsers::class,
-        'votepen-administrator' => MustBeVotePenAdministrator::class,
-        'administrator'         => MustBeAdministrator::class,
-        'moderator'             => MustBeModerator::class,
-        'shaddow-ban'           => ShadowBan::class,
-    ];
+    protected function commands()
+    {
+        require base_path('routes/console.php');
+    }
 }
