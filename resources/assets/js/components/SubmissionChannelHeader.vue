@@ -27,10 +27,6 @@ export default {
         };
     },
 
-    created() {
-        console.log(`referrer: "${document.referrer}"`); 
-    },
-
     components: { Subscribe },
 
     computed: {
