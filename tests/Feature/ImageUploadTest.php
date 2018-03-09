@@ -31,8 +31,8 @@ class ImageUploadTest extends TestCase
             'photo' => UploadedFile::fake()->image('avatar.png', 250, 100)
         ])->assertStatus(422);
 
-        // accept squar images 
-        $uploaded_file_address = $this->json('POST', '/api/users/avatar', [
+        // accept square images 
+        $this->json('POST', '/api/users/avatar', [
             'photo' => UploadedFile::fake()->image('avatar.png', 250, 250)
         ])->assertStatus(200);
     }
