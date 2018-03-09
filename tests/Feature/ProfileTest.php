@@ -18,7 +18,7 @@ class ProfileTest extends TestCase
             'name' => 'Yoginth', 
             'location' => 'Earth', 
             'info' => [
-                'twitter' => 'yoginth_on_twitter', 
+                'twitter' => 'YoginthS', 
                 'website' => 'https://yoginth.ml'
             ]
         ]);
@@ -26,7 +26,7 @@ class ProfileTest extends TestCase
         $this->get('/@' . 'YoginthS')
             ->assertSee('@' . 'YoginthS')
             ->assertSeeText('Earth')
-            ->assertSee('yoginth_on_twitter')
+            ->assertSee('YoginthS')
             ->assertSee('yoginth.ml')
             ->assertSee('Yoginth');
     }
