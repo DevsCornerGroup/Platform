@@ -96,7 +96,6 @@ Route::post('/ssh/cache-clear', 'SSHController@clearCache');
 Route::post('/ssh/route-clear', 'SSHController@routeClear');
 Route::post('/ssh/view-clear', 'SSHController@viewClear');
 Route::post('/ssh/config-clear', 'SSHController@configClear');
-Route::post('/ssh/route-clear', 'SSHController@routeClear');
 
 // Passport
 // Route::get('/apps', 'OAuthController@show');
