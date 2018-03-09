@@ -103,7 +103,7 @@ class PhotoController extends Controller
             'photo' => [
                 'required',
                 'image',
-                Rule::dimensions()->minWidth(250)->minHeight(250)->ratio(1 / 1),
+                Rule::dimensions()->minWidth(100)->minHeight(100)->ratio(1 / 1),
             ],
         ]);
 
