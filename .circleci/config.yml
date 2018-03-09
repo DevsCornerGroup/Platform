@@ -58,15 +58,15 @@ jobs:
       - run: 
          name: Creating Database
          command: touch database/database.sqlite
-      
+
       - run: 
          name: Generating Laravel Keys
          command: php artisan key:generate
-         
+
       - run: 
          name: Migrating to Database
          command: php artisan migrate
-         
+
       - run: 
          name: Building Assets
          command: npm run dev
