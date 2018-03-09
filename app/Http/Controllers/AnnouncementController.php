@@ -113,8 +113,9 @@ class AnnouncementController extends Controller
                 'user_id'         => Auth::user()->id,
                 'announcement_id' => $request->announcement_id,
             ]);
-        } catch (\Exception $exception) {}
-            
+        } catch (\Exception $exception) {
+        }
+
         return res(200, 'Announcement has been marked as seen.');
     }
 
