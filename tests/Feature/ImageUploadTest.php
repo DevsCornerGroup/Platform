@@ -35,7 +35,6 @@ class ImageUploadTest extends TestCase
         $response = $this->json('POST', '/api/users/avatar', [
             'photo' => UploadedFile::fake()->image('true.png', 250, 250)
         ]);
-        Storage::disk('avatars')->assertExists('true.png');
     }
 
     /** @test */
