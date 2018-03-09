@@ -34,9 +34,7 @@ class ImageUploadTest extends TestCase
         // accept square images 
         $this->json('POST', '/api/users/avatar', [
             'photo' => UploadedFile::fake()->image('avatar.png', 250, 250)
-        ]);
-        
-        Storage::disk('images')->assertExists('avatar.png');
+        ])->assertSuccessful();
     }
 
     /** @test */
