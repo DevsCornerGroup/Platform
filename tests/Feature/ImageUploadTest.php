@@ -27,14 +27,15 @@ class ImageUploadTest extends TestCase
     public function user_can_upload_avatar()
     {
         // don't accept non-square images 
-        $this->json('POST', '/api/users/avatar', [
-            'photo' => UploadedFile::fake()->image('avatar.png', 250, 100)
+        $response = $this->json('POST', '/api/users/avatar', [
+            'photo' => UploadedFile::fake()->image('false.png', 250, 100)
         ])->assertStatus(422);
 
         // accept square images 
-        $this->json('POST', '/api/users/avatar', [
-            'photo' => UploadedFile::fake()->image('avatar.png', 250, 250)
-        ])->assertStatus(200);
+        $response = $this->json('POST', '/api/users/avatar', [
+            'photo' => UploadedFile::fake()->image('true.png', 250, 250)
+        ]);
+        Storage::disk('avatars')->assertExists('true.png');
     }
 
     /** @test */
