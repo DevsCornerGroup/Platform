@@ -24,20 +24,6 @@ class ImageUploadTest extends TestCase
     }
 
     /** @test */
-    public function user_can_upload_avatar()
-    {
-        // don't accept non-square images 
-        $this->json('POST', '/api/users/avatar', [
-            'photo' => UploadedFile::fake()->image('avatar.png', 250, 100)
-        ])->assertStatus(422);
-
-        // accept square images 
-        $this->json('POST', '/api/users/avatar', [
-            'photo' => UploadedFile::fake()->image('avatar.png', 250, 250)
-        ])->assertRedirect('/');
-    }
-
-    /** @test */
     public function user_can_upload_photo()
     {
         $this->disableExceptionHandling();        
