@@ -90,12 +90,17 @@ Route::post('/emails/announcement/send', 'EmailsController@send');
 Route::post('/backend/channel-removal-warnings/send', 'WarningsController@channelsRemoval');
 Route::get('/emails/announcement/preview', 'EmailsController@preview');
 
-// ssh control
+// SSH control
 Route::post('/ssh/flush-all', 'SSHController@flushAll');
 Route::post('/ssh/cache-clear', 'SSHController@clearCache');
 Route::post('/ssh/route-clear', 'SSHController@routeClear');
 Route::post('/ssh/view-clear', 'SSHController@viewClear');
 Route::post('/ssh/config-clear', 'SSHController@configClear');
+
+// Submission control
+Route::get('/embed/link', 'EmbedController@link');
+Route::get('/embed/title', 'EmbedController@title');
+Route::get('/link-submission', 'EmbedController@linkSubmission');
 
 // Passport
 // Route::get('/apps', 'OAuthController@show');
